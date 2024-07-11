@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Groztec';
+  src: url('/fonts/GrotzecCond-Demibold.otf');
+}
+
+@font-face {
+  font-family: 'Scto Grotesk';
+  font-weight: bold;
+  src: url('/fonts/Scto\ Grotesk\ A\ Bold.woff');
+}
+
+@font-face {
+  font-family: 'Scto Grotesk';
+  font-weight: regular;
+  src: url('/fonts/Scto\ Grotesk\ A\ Regular.woff');
+}
