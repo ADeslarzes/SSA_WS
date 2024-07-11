@@ -1,0 +1,84 @@
+
+
+# Node.js dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn/patches
+
+# Temporary folders
+/dist
+/build
+
+# Static Bundles
+*.bundle.js
+*.map
+
+# Mac system files
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Build directories
+build/
+dist/
+tmp/
+out/
+coverage/
+
+# Cache files
+.cache/
+.tmp/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+/coverage
+/junit.xml
+/coverage-final.json
+/coverage-summary.json
+
+# Ignore any images or media files
+public/images/*
+!public/images/logo.png  # If you want to keep specific images, negate the pattern
+
+# Ignore storybook static files
+/.storybook-static
+
+# Ignore temporary files
+*.swp
+*.swo
+*.tmp
+*.pid
+
+# Ignore parcel-bundler cache
+.cache/
+.parcel-cache/
+
+# Ignore react-native files
+.expo/
+*.expo

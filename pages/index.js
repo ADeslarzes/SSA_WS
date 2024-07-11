@@ -13,13 +13,33 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
 
+  function onLoad(spline) {
+    const obj = spline.findObjectByName('Cube 4');
+    // or
+    // const obj = spline.findObjectById('8E8C2DDD-18B6-4C54-861D-7ED2519DE20E');
+
+    // save it in a ref for later use
+    if (obj) {
+      // Adjust position
+      obj.position.x += 100;
+      obj.position.y -= 100;
+      obj.position.z -= 1000;
+      
+      // Rotate the object
+      // Assuming you want to rotate by a certain amount in radians
+      
+  }
+
+  }
+
   return (
     <div className="w-screen h-screen flex flex-col justify-between p-9 md:p-16 overflow-none">
       {/* Spline Scene */}
       <div className="absolute -z-10 inset-0 w-full h-full object-cover">
         <Spline
-          scene="https://prod.spline.design/f-sU2J6gyUlSen0s/scene.splinecode"
-          onLoad={() => {
+          scene="https://prod.spline.design/edqNzpCtOye1ESxo/scene.splinecode"
+          onLoad={(spline) => {
+            onLoad(spline)
             setIsLoaded(true);
           }}
         />
