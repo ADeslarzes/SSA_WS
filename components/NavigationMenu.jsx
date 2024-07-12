@@ -62,7 +62,7 @@ export default function NavigationMenu() {
   }
 
   return (
-    <div className=" font-SctoGrotesk ">
+    <div className=" font-SctoGrotesk relative ">
       {/* Bottom nav bar */}
       <motion.div
         initial={{ opacity: 0, height: 'auto' }}
