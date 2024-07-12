@@ -8,6 +8,7 @@ import Image from 'next/image';
 import BGImage from '@/public/images/studio.png';
 import { motion, useScroll, useAnimation } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
+import Torus from '@/components/Torus';
 
 export default function studionew() {
   const scrollRef = useRef(null);
@@ -59,7 +60,10 @@ export default function studionew() {
             Login
           </div>
         </div>
-        <Image className="" src={BGImage} width={1200} height={600} />
+        {/* Image du studio */}
+        <div>
+          <Torus />
+        </div>
       </div>
 
       <div className="w-full px-8 fixed bottom-12 z-50">

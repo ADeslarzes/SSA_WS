@@ -12,10 +12,10 @@ export default function NavigationMenu() {
   let [IsMenuOpen, setIsMenuOpen] = useState(false);
   const [currentUrl, setCurrentUrl] = useState('/');
   const [currentPage, setCurrentPage] = useState({
-    title: 'Hint3land',
+    title: 'SSA',
     url: '/',
-    iconUrl: '/about-icon.png',
-    description: 'Building the digital future',
+    iconUrl: '/SSA_FULL_LOGO.png',
+    description: 'Sustainability in space',
     navdescription: 'Homepage',
   });
   const [formattedList, setFormattedList] = useState([]);
@@ -24,15 +24,15 @@ export default function NavigationMenu() {
   const pages = [
     {
       id: 0,
-      title: 'Hint3land',
+      title: 'SSA',
       url: '/',
       iconUrl: '/about-icon.png',
-      description: 'Building the digital future',
+      description: 'Space Situation Awareness',
       navdescription: 'Homepage',
     },
     {
       id: 1,
-      title: 'H3.Studio',
+      title: 'Who are we?',
       url: '/studio',
       iconUrl: '/about-icon.png',
       description: 'Learn more about us',
@@ -40,11 +40,11 @@ export default function NavigationMenu() {
     },
     {
       id: 2,
-      title: 'H3.Ai',
+      title: 'Database',
       url: 'https://ai.hint3rland.com/',
-      iconUrl: '/ai-icon.png',
-      description: 'Boost your creativity',
-      navdescription: 'Boost your creativity',
+      iconUrl: 'Bulbe.jpg',
+      description: 'Open access to database',
+      navdescription: 'Open access to database',
     },
   ];
 
@@ -62,10 +62,11 @@ export default function NavigationMenu() {
   }
 
   return (
-    <div className=" font-SctoGrotesk">
+    <div className=" font-SctoGrotesk ">
+      {/* Bottom nav bar */}
       <motion.div
         initial={{ opacity: 0, height: 'auto' }}
-        animate={{ opacity: 1, height: IsMenuOpen ? 500 : 72 }}
+        animate={{ opacity: 1, height: IsMenuOpen ? 300 : 60 }}
         transition={{
           type: 'spring',
           stiffness: 180,
