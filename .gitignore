@@ -2,7 +2,7 @@
 !.gitignore
 
 # .next files
-.next/
+.next
 
 # Node.js dependencies
 /node_modules
