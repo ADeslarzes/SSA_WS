@@ -1,4 +1,8 @@
+# Gitignore for Next.js projects
+!.gitignore
 
+# .next files
+.next/
 
 # Node.js dependencies
 /node_modules
