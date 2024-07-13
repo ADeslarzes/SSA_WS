@@ -12,8 +12,8 @@ module.exports = {
         SctoGrotesk: ['Scto Grotesk', 'sans-serif'],
       },
       backgroundImage: {
-        christophe: "url('/images/team/Christophe.png')",
-        guillaume: "url('/images/team/Guillaume.png')",
+        josue: "url('/images/team/Photo_Josue.jpg')",
+        aymeric: "url('/images/team/Ricou.png')",
         stanislas: "url('/images/team/Stanislas.png')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

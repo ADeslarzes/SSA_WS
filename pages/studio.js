@@ -75,71 +75,155 @@ export default function studionew() {
           id="toBeScaled"
           initial={{ scale: 1 }}
           animate={controls}
-          className="w-screen min-h-screen -mt-16 rounded-2xl bg-[#BCCABA] shadow-inner flex items-center flex-col md:max-h-max"
+          className="w-screen min-h-screen -mt-16 rounded-2xl bg-black shadow-inner flex items-center flex-col md:max-h-max"
         >
+        {/*Description of the association*/}
           <div className="mt-12  flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
-            <div className="text-[#D1FFC3] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Groztec">
-              COMPANY
+            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Groztec">
+              ASSOCIATION
             </div>
             <div className="flex-grow">
               <div className="flex flex-col  max-w-[1500px]">
-                <div className="text-black mb-12 md:w-3/4 text-xl">
-                  Hint3rland is a multidisciplinary R&D studio thriving at the
-                  frontier of digital innovation. Our wide-ranging services
-                  extend from consultation to comprehensive project development,
-                  in the realms of blockchain, artificial intelligence, extended
-                  reality, and beyond. <br /> <br /> Co-founded by 3 experts, we
-                  excel in a variety of digital domains. Beyond our consultation
-                  and project development expertise, our services span
-                  masterclasses, creative briefs, business strategy, IT
-                  development, and graphic design. By blending our unique
-                  skills, we continually redefine the landscape of digital
-                  innovation.
-                </div>
-                <div className="flex gap-5 flex-col lg:flex-row">
-                  <div className="w-full min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-[#D3E4D0]">
-                    <p className="text-black font-semibold">
-                      Collaborative Innovation
-                    </p>
-                    <p className="text-black/40">
-                      We believe in the power of collaboration to drive
-                      innovation. By harnessing diverse talents, we deliver
-                      transformative solutions for businesses
-                    </p>
-                  </div>
-                  <div className=" w-full min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-[#D3E4D0]">
-                    <p className="text-black font-semibold">
-                      Bridging cultures
-                    </p>
-                    <p className="text-black/40">
-                      We operates at the intersection of European and Chinese
-                      markets. Our deep understanding of these distinct market
-                      allows us to help brands expand globally while catering to
-                      local nuances.
-                    </p>
-                  </div>
-                  <div className="w-full min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-[#D3E4D0]">
-                    <p className="text-black font-semibold">
-                      Hybridization of realities
-                    </p>
-                    <p className="text-black/40">
-                      We are pushing the boundaries between the physical and
-                      digital worlds. Our innovative solutions allow for
-                      immersive experiences like never before, opening doors to
-                      inclusivity and global connectivity.
-                    </p>
-                  </div>
+                <div className="text-white mb-12 md:w-3/4 text-xl">
+                  Description of the association
                 </div>
               </div>
             </div>
           </div>
+        {/*Description of the projects*/}
+          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
+            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0 h-full md:sticky top-12 font-Groztec">
+              CURRENT PROJECTS
+            </div>
+            <div className="flex-grow">
+              <div className="flex flex-col max-w-[1500px]">
+                <div className="text-white mb-12 md:w-3/4 text-xl">
+                  We are currently working on a number of projects that aim to render this world a better place. 
+                  Here are some of the projects we are currently working on:
+                </div>
+                {/* Sliders */}
+                <div className="flex gap-5 overflow-x-auto whitespace-nowrap max-w-[800px]">
+                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
+                    <Link href="/project1" className='text-black font-semibold text-xl'>
+                      Integrating Weather 
+                    </Link>
+                    <img src="/Satellite.avif" alt="Satellite" className="w-full h-auto rounded-md mb-2"/>
+                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                    </p>
+                  </div>
+                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
+                    <p className="text-black font-semibold text-xl">
+                      Collaborative Innovation
+                    </p>
+                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                    </p>
+                  </div>
+                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
+                    <p className="text-black font-semibold text-xl">
+                      Collaborative Innovation
+                    </p>
+                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                    </p>
+                  </div>
+                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
+                    <p className="text-black font-semibold text-xl">
+                      Collaborative Innovation
+                    </p>
+                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                    </p>
+                  </div>
+                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
+                    <p className="text-black font-semibold text-xl">
+                      Collaborative Innovation
+                    </p>
+                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                    </p>
+                  </div>
+                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
+                    <p className="text-black font-semibold text-xl">
+                      Collaborative Innovation
+                    </p>
+                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                    </p>
+                  </div>
+                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
+                    <p className="text-black font-semibold text-xl">
+                      Collaborative Innovation
+                    </p>
+                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                    </p>
+                  </div>
+                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
+                    <p className="text-black font-semibold text-xl">
+                      Collaborative Innovation
+                    </p>
+                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                    </p>
+                  </div>
+                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
+                    <p className="text-black font-semibold text-xl">
+                      Collaborative Innovation
+                    </p>
+                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                      We believe in the power of collaboration to drive innovation. 
+                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
+                    </p>
+                  </div>
+                </div>
+                {/* Add more slides as needed */}
+              </div>
+            </div>
+          </div>
+          {/*Description of the team*/}
           <div className="pt-14 md:pt-28 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px]  justify-between gap-x-[120px] mx-auto">
-            <div className="text-[#D1FFC3] mb-8 md:mb-0 text-3xl md:text-5xl w-[300px] h-full md:sticky top-12 font-Groztec">
-              FOUNDING TEAM
+            <div className="text-[#B22222] mb-8 md:mb-0 text-3xl md:text-5xl w-[300px] h-full md:sticky top-12 font-Groztec">
+              TEAM LEAD 
             </div>
             <div className="flex-grow">
               <div className="flex flex-col  max-w-[1500px]">
-                <div className="text-black mb-12 md:w-3/4 text-xl">
+                <div className="text-white mb-12 md:w-3/4 text-xl">
                   Our team consists of members with diverse backgrounds,
                   including designers, technologists, and researchers. This
                   unique blend of expertise empowers us to create innovative
@@ -151,45 +235,55 @@ export default function studionew() {
                   digital innovation.
                 </div>
                 <div className="flex  gap-5 flex-col lg:flex-row">
-                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-[#D3E4D0]">
-                    <div className="w-full h-[250px] bg-christophe bg-cover md:block hidden rounded-lg mb-2"></div>
+                  {/* Josué */}
+                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-white">
+                    <div className="w-full h-[250px] bg-josue bg-cover md:block hidden rounded-lg mb-2"></div>
                     <div className="flex gap-x-2 mb-2">
-                      <div className="bg-[#D1FFC3] text-md text-black/40 px-2 py-0.5 rounded-md">
-                        Strategy
+                      <div className="bg-[#B00000] text-md text-black px-2 py-0.5 rounded-md">
+                        Lead
                       </div>
                     </div>
                     <p className="text-black font-semibold">
-                      Christophe Branchu{' '}
+                      Josué Aubert{' '}
+                    </p>
+                    <a className="text-black/40 text-[#B00000]" href="mailto:josue.aubert@epfl.ch">josue.aubert@epfl.ch</a>
+                    <p className="text-black/40">
+                      PH BA3
+                    </p>
+                    <p className='text-black/40'>
+                      Super beau gosse
+                    </p>
+                  </div>
+                  {/* Aymeric */}
+                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-white">
+                    <div className="w-full h-[250px] bg-aymeric bg-cover md:block hidden rounded-lg mb-2"></div>
+                    <div className="flex gap-x-2 mb-2">
+                      <div className="bg-[#B00000] text-md text-black px-2 py-0.5 rounded-md">
+                        Lead
+                      </div>
+                    </div>
+                    <p className="text-black font-semibold">
+                      Aymeric Deslarzes{' '}
+                    </p>
+                    <a className="text-black/40 text-[#B00000]" href="mailto:aymeric.deslarzes@epfl.ch">aymeric.deslarzes@epfl.ch</a>
+                    <p className="text-black/40">
+                      PH BA3
+                    </p>
+                  </div>
+                  {/* Autre */}
+                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-white">
+                    <div className="w-full h-[250px] bg-stanislas bg-cover md:block hidden rounded-lg mb-2"></div>
+                    <div className="flex gap-x-2 mb-2">
+                      <div className="bg-[#B00000] text-md text-black px-2 py-0.5 rounded-md">
+                        Lead
+                      </div>
+                    </div>
+                    <p className="text-black font-semibold">
+                      Juery Stanislas{' '}
                     </p>
                     <p className="text-black/40">
                       Creative director and entrepreneur, melds tech and fashion
                       culture in his work.
-                    </p>
-                  </div>
-                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-[#D3E4D0]">
-                    <div className="w-full h-[250px] bg-guillaume bg-cover md:block hidden rounded-lg mb-2"></div>
-                    <div className="flex gap-x-2 mb-2">
-                      <div className="bg-[#D1FFC3] text-md text-black/40 px-2 py-0.5 rounded-md">
-                        Education
-                      </div>
-                    </div>
-                    <p className="text-black font-semibold">Guillaume Helleu</p>
-                    <p className="text-black/40">
-                      Lecturer and analyst, focused on the social impact of new
-                      technology.
-                    </p>
-                  </div>
-                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-[#D3E4D0]">
-                    <div className="w-full h-[250px] bg-stanislas bg-cover md:block hidden rounded-lg mb-2"></div>
-                    <div className="flex gap-x-2 mb-2">
-                      <div className="bg-[#D1FFC3] text-md text-black/40 px-2 py-0.5 rounded-md">
-                        Programming
-                      </div>
-                    </div>
-                    <p className="text-black font-semibold">Stanislas Juery</p>
-                    <p className="text-black/40">
-                      Senior programmer specialized in blockchain and machine
-                      learning.
                     </p>
                   </div>
                 </div>
@@ -197,12 +291,12 @@ export default function studionew() {
             </div>
           </div>
           <div className="pt-14 md:pt-28  flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
-            <div className="text-[#D1FFC3] text-3xl mb-8 md:text-5xl w-[300px] md:sticky h-full top-12 font-Groztec">
+            <div className="text-[#B22222] text-3xl mb-8 md:text-5xl w-[300px] md:sticky h-full top-12 font-Groztec">
               OUR SERVICES
             </div>
             <div className="flex-grow">
               <div className="flex flex-col max-w-[1500px]">
-                <div className="text-black mb-24 md:w-3/4 text-xl">
+                <div className="text-white mb-24 md:w-3/4 text-xl">
                   Whether you're interested in exploring how Web3 can
                   revolutionize the future of finance or want to learn more
                   about building scalable dApps, we would love to collaborate
@@ -297,12 +391,12 @@ export default function studionew() {
             </div>
           </div>
           <div className="pt-14 md:pt-28  flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between  mx-auto">
-            <div className="text-[#D1FFC3] text-3xl md:text-5xl w-[300px] md:sticky top-12 font-Groztec">
+            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] md:sticky top-12 font-Groztec">
               FIND US
             </div>
             <div className="flex-grow flex justify-start">
               <div className="flex flex-col w-full">
-                <div className="text-black w-full pt-8 md:pt-0 mb-5 md:text-4xl md:font-bold font-SctoGrotesk">
+                <div className="text-white w-full pt-8 md:pt-0 mb-5 md:text-4xl md:font-bold font-SctoGrotesk">
                   Founded in 2023, active globally:
                 </div>
                 <div className="flex  gap-5 flex-col lg:flex-row">
@@ -447,8 +541,8 @@ export default function studionew() {
           </div>
         </motion.div>
       </div>
-
-      <div className="bg-[#D9D9D9] w-screen hidden md:block px-12 pt-8 pb-12">
+      {/* Footer for studio page */}
+      {/* <div className="bg-[#D9D9D9] w-screen hidden md:block px-12 pt-8 pb-12">
         <div id="target"></div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -469,7 +563,7 @@ export default function studionew() {
       </div>
       <div className="block md:hidden w-screen bg-black p-8 -mt-6">
         <FooterSVGMobile />
-      </div>
+      </div>  */}
     </div>
   );
 }
