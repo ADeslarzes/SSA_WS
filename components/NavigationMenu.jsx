@@ -24,7 +24,7 @@ export default function NavigationMenu() {
   const pages = [
     {
       id: 0,
-      title: 'SSA',
+      title: 'Orbit simulation',
       url: '/',
       iconUrl: '/about-icon.png',
       description: 'Space Situation Awareness',
@@ -32,7 +32,7 @@ export default function NavigationMenu() {
     },
     {
       id: 1,
-      title: 'Who are we?',
+      title: 'SSA',
       url: '/studio',
       iconUrl: '/about-icon.png',
       description: 'Learn more about us',
@@ -41,7 +41,7 @@ export default function NavigationMenu() {
     {
       id: 2,
       title: 'Database',
-      url: 'https://ai.hint3rland.com/',
+      url: '/database',
       iconUrl: 'Bulbe.jpg',
       description: 'Open access to database',
       navdescription: 'Open access to database',
@@ -62,15 +62,15 @@ export default function NavigationMenu() {
   }
 
   return (
-    <div className=" font-SctoGrotesk relative ">
+    <div className=" font-SctoGrotesk top-6 right-6">
       {/* Bottom nav bar */}
       <motion.div
-        initial={{ opacity: 0, height: 'auto' }}
-        animate={{ opacity: 1, height: IsMenuOpen ? 300 : 60 }}
+        initial={{ opacity: 0, width: '10%', height: '10%' }} 
+        animate={{ opacity: 1, width: IsMenuOpen ? 400 : 'auto', height: IsMenuOpen ? 400 : 'auto' }} // button size
         transition={{
           type: 'spring',
           stiffness: 180,
-          damping: 20,
+          damping: 10,
           delay: 0,
         }}
         onClick={() => {
@@ -78,7 +78,7 @@ export default function NavigationMenu() {
         }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
-        className="bg-white shadow-md mx-auto rounded-lg w-full md:w-[650px] flex justify-start"
+        className="bg-white shadow-md mx-auto rounded-lg w-full md:w-[650px] inline-flex justify-start"
       >
         <AnimatePresence mode="popLayout">
           {!IsMenuOpen && (
@@ -91,16 +91,18 @@ export default function NavigationMenu() {
                 className="flex justify-between items-center w-full p-5"
               >
                 <div className="flex items-center gap-2 w-full">
-                  <div className="text-black/40">{currentPage.title}</div>
-                  <div className="text-black/40">/</div>
-                  <div className="text-black truncate text-ellipsis  flex-grow">
+                  {/* SSA in the NavBar */}
+                  <div className="text-black underline">{currentPage.title}</div>
+                  {/* <div className="text-black/40">/</div> */}
+                  {/* <div className="text-black truncate text-ellipsis  flex-grow">
                     {isHovering ? 'View' : currentPage.description}
-                  </div>
+                  </div> */}
                   <div
                     className="hover:bg-black/10 justify-end rounded-md transition-all flex-shrink-0"
                     onClick={() => setIsMenuOpen(true)}
                   >
-                    <svg
+                    {/* Three dot next to SSA */}
+                    {/* <svg
                       width="32"
                       height="32"
                       viewBox="0 0 32 32"
@@ -119,7 +121,7 @@ export default function NavigationMenu() {
                         d="M26 16.0001C26 14.8956 25.1046 14.0001 24 14.0001C22.8954 14.0001 22 14.8956 22 16.0001C22 17.1047 22.8954 18.0001 24 18.0001C25.1046 18.0001 26 17.1047 26 16.0001Z"
                         fill="#1C1C1C"
                       />
-                    </svg>
+                    </svg> */}
                   </div>
                 </div>
               </motion.div>
@@ -240,9 +242,9 @@ export default function NavigationMenu() {
                 transition={{ duration: 0.2, delay: 0.6, ease: 'easeInOut' }}
                 className="flex flex-col md:flex-row justify-center md:justify-between items-center w-full md:h-[72px] md:pl-6 md:pr-5"
               >
-                <div className="font-semibold w-full text-black text-center md:text-left text-lg mb-5 md:mb-2 leading-none">
+                {/* <div className="font-semibold w-full text-black text-center md:text-left text-lg mb-5 md:mb-2 leading-none">
                   Building the digital <br className="hidden md:block" /> future
-                </div>
+                </div> */}
                 <div className="rounded-lg flex-shrink-0 mb-5 md:mb-0 font-semibold w-max h-11 p-4 border-black/20 text-black border-[1px] flex justify-center items-center">
                   Chat with us
                 </div>
