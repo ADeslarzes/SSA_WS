@@ -1,5 +1,10 @@
 
 
+.next/cache/
+.next/server/
+.next/static/chunks/
+.next/trace
+
 # Node.js dependencies
 /node_modules
 /.pnp
