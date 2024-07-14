@@ -1,4 +1,8 @@
+# Gitignore for Next.js projects
+!.gitignore
 
+# .next files
+.next
 
 .next/cache/
 .next/server/
