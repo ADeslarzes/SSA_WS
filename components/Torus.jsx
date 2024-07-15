@@ -45,7 +45,7 @@ export default function Torus() {
     }
     
     animate();
-    })
+    }, [])
 
   return (
     <div className="w-screen h-screen absolute inset-0 flex justify-center items-center z-20 bg-black">

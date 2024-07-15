@@ -6,7 +6,7 @@
 
 .next/cache/
 .next/server/
-.next/static/chunks/
+.next/static/
 .next/trace
 
 # Node.js dependencies

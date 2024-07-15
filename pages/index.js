@@ -58,9 +58,8 @@ export default function Home() {
       </div>
 
       {/* Navigation Menu */}
-      <div className="w-full px-9 absolute bottom-9 md:bottom-16 left-1/2 -translate-x-1/2">
+      <div className="w-full px-9 absolute top-9 md:top-16 right-9">
         <NavigationMenu />
-        
       </div>
     </div>
   );
