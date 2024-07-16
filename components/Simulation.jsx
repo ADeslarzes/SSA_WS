@@ -33,7 +33,7 @@ const Simulation = ({ onLoad }) => {
     const loader = new THREE.TextureLoader();
     const geometry = new THREE.IcosahedronGeometry(2, detail);
     const material = new THREE.MeshPhongMaterial({
-      map: loader.load('/earth/00_earthmap1k.jpg'),
+      map: loader.load('/earth/00_earthmap10k.jpg'),
       specularMap: loader.load('/earth/02_earthspec1k.jpg'),
       bumpMap: loader.load('/earth/01_earthbump1k.jpg'),
       bumpScale: 4,
@@ -196,12 +196,12 @@ const Simulation = ({ onLoad }) => {
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
-  }, [onLoad]);
+  });
 
   return (
     <div ref={canvasRef} className="w-screen h-screen absolute inset-0 flex justify-center items-center z-20 bg-black">
       <div className="flex justify-center items-center text-white animate-pulse">
-        <canvas id="bg"></canvas>
+        {/* <canvas id="bg"></canvas> */}
       </div>
     </div>
   );
