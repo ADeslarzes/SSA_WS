@@ -12,6 +12,8 @@ const Simulation = ({ onLoad }) => {
   useEffect(() => {
     if (!window) return;
 
+    if(canvasRef.current.children.length > 1) return;
+
     const w = window.innerWidth;
     const h = window.innerHeight;
     const scene = new THREE.Scene();
