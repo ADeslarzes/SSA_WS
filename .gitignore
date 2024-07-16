@@ -72,8 +72,8 @@ coverage/
 /coverage-summary.json
 
 # Ignore any images or media files
-public/images/*
-!public/images/logo.png  # If you want to keep specific images, negate the pattern
+
+
 
 # Ignore storybook static files
 /.storybook-static
