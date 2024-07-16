@@ -5,6 +5,7 @@ import SolidLogo from '@/components/SolidLogo';
 import NavigationMenu from '@/components/NavigationMenu';
 import Data from '@/components/Data';
 import tleData from '/public/data/TLE_Heavy.json';
+//import {Button} from "@nextui-org/button";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,6 +16,9 @@ export default function Home() {
     <div className="w-screen h-screen flex items-center justify-center bg-black">
       <div className="max-w-[1000px] max-h-[500px] w-full h-full flex flex-col justify-between p-9 md:p-16 overflow-hidden relative bg-black shadow-lg rounded-lg">
         {/* 3D Simulation */}
+        {/* <Button color="primary" variant="bordered">
+          Bordered
+        </Button>   */}
         <div className="relative w-full h-full flex justify-center items-center z-0">
           <div className="overflow-y-auto w-full h-full bg-black p-4">
             <Data 
@@ -24,16 +28,15 @@ export default function Home() {
           </div>
         </div>
         {/* Search Query */}
-        <div className='max-w-[400px] items-center justify-center'>
+        {/* <div className="max-w-[400px] items-center ">
           <input
             type="text"
-            placeholder="Search by satellite name or TLE..."
+            placeholder="Search by satellite name or TLE ..."
             // value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
-            className="w-full p-2 mb-4 border border-gray-300 rounded"
+            // onChange={e => setSearchQuery(e.target.value)}
+            className="w-full p-2 mb-4 border border-red rounded"
           />
-          {/* {formatTLEData(tleData, searchQuery)} */}
-        </div>
+        </div> */}
       </div>
       <div>
         {/* Loader */}
