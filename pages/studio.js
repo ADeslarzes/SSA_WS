@@ -107,7 +107,7 @@ export default function studionew() {
                     <Link href="/project1" className='text-black font-semibold text-xl'>
                       Integrating Weather 
                     </Link>
-                    <img src="/Satellite.avif" alt="Satellite" className="w-full h-auto rounded-md mb-2"/>
+                    <img src="/projects/satellite.avif" alt="Satellite" className="w-full h-auto rounded-md mb-2"/>
                     <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
                       We believe in the power of collaboration to drive innovation. 
                       By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
@@ -119,7 +119,7 @@ export default function studionew() {
                     <p className="text-black font-semibold text-xl">
                       Collaborative Innovation
                     </p>
-                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
                     <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
                       We believe in the power of collaboration to drive innovation. 
                       By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
@@ -131,7 +131,7 @@ export default function studionew() {
                     <p className="text-black font-semibold text-xl">
                       Collaborative Innovation
                     </p>
-                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
                     <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
                       We believe in the power of collaboration to drive innovation. 
                       By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
@@ -143,7 +143,7 @@ export default function studionew() {
                     <p className="text-black font-semibold text-xl">
                       Collaborative Innovation
                     </p>
-                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
                     <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
                       We believe in the power of collaboration to drive innovation. 
                       By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
@@ -155,7 +155,7 @@ export default function studionew() {
                     <p className="text-black font-semibold text-xl">
                       Collaborative Innovation
                     </p>
-                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
                     <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
                       We believe in the power of collaboration to drive innovation. 
                       By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
@@ -167,7 +167,7 @@ export default function studionew() {
                     <p className="text-black font-semibold text-xl">
                       Collaborative Innovation
                     </p>
-                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
                     <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
                       We believe in the power of collaboration to drive innovation. 
                       By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
@@ -179,7 +179,7 @@ export default function studionew() {
                     <p className="text-black font-semibold text-xl">
                       Collaborative Innovation
                     </p>
-                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
                     <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
                       We believe in the power of collaboration to drive innovation. 
                       By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
@@ -191,7 +191,7 @@ export default function studionew() {
                     <p className="text-black font-semibold text-xl">
                       Collaborative Innovation
                     </p>
-                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
                     <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
                       We believe in the power of collaboration to drive innovation. 
                       By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
@@ -203,7 +203,7 @@ export default function studionew() {
                     <p className="text-black font-semibold text-xl">
                       Collaborative Innovation
                     </p>
-                      <img src="/Satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
+                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
                     <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
                       We believe in the power of collaboration to drive innovation. 
                       By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  

@@ -11,7 +11,7 @@ export default function SolidLogo() {
 
   return (
     <div style={logoStyle}>
-      <img src={'/SSA_LOGO_FULL.png'} alt="SSA Logo" />
+      <img src={'/ssa_logo/SSA_LOGO_FULL.png'} alt="SSA Logo" />
     </div>
   );
 }

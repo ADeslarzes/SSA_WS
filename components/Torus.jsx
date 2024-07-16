@@ -4,10 +4,10 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export default function Torus() {
-    useEffect(() => {
-        if(!window) return;
+  useEffect(() => {
+    if(!window) return;
     
-        const scene = new THREE.Scene();
+    const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({
       canvas: document.querySelector('#bg'),
@@ -45,7 +45,7 @@ export default function Torus() {
     }
     
     animate();
-    }, [])
+  }, [])
 
   return (
     <div className="w-screen h-screen absolute inset-0 flex justify-center items-center z-20 bg-black">
