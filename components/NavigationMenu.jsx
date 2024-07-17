@@ -65,8 +65,8 @@ export default function NavigationMenu() {
     <div className=" font-SctoGrotesk top-6 right-6 fixed">
       {/* Bottom nav bar */}
       <motion.div
-        initial={{ opacity: 0, width: '10%', height: '10%' }} 
-        animate={{ opacity: 1, width: IsMenuOpen ? 400 : 'auto', height: IsMenuOpen ? 400 : 'auto' }} // button size
+        initial={{ scale: 1, borderColor: 'transparent', opacity: 0, width: '10%', height: '10%' }} 
+        animate={{ opacity: 1, width: IsMenuOpen ? 400 : 'auto', height: IsMenuOpen ? 400 : 'auto' }} // button size"
         transition={{
           type: 'spring',
           stiffness: 180,
@@ -78,7 +78,8 @@ export default function NavigationMenu() {
         }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
-        className="bg-white shadow-md mx-auto rounded-lg w-full md:w-[650px] inline-flex justify-start"
+        whileHover={{ scale: 0.94, borderColor: '#FF0000' }}  // Shrinks and changes border color on hover
+        className="bg-white shadow-md mx-auto border-2 cursor-pointer rounded-lg md:w-[650px] inline-flex justify-start"
       >
         <AnimatePresence mode="popLayout">
           {!IsMenuOpen && (

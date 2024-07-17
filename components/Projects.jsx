@@ -60,13 +60,15 @@ const HomePage = () => {
         <motion.div // Animate the card
           key={item.id} 
           layoutId={item.id} 
-          className="p-4 text-black rounded-xl bg-white cursor-pointer overflow-hidden" 
+          className="p-4 text-black border-2 rounded-xl bg-white cursor-pointer overflow-hidden" 
           onClick={() => setSelectedId(item.id)} 
           style={{
-            height: '500px',
+            height: '400px',
             width: '312px',
             flex: '0 0 auto'  // Ensure the card does not shrink or grow
           }}
+          initial={{ scale: 1, borderColor: 'transparent' }}
+          whileHover={{ scale: 0.96, borderColor: '#FF0000' }}  // Shrinks and changes border color on hover
         >
           {/* Title */}
           <div className="text-black font-semibold middle text-xl mb-2"> 
@@ -80,11 +82,14 @@ const HomePage = () => {
               className="h-1/2 w-full object-cover rounded-md mb-2"
             />
             <motion.p
-              className="text-black/40 overflow-hidden"
+              className="text-black/70 overflow-hidden"
               style={{
+                display: '-webkit-box',
+                WebkitBoxOrient: 'vertical',
+                WebkitLineClamp: 7,  // Limits the text to 5 lines
+                overflow: 'hidden',
                 whiteSpace: 'normal',
                 wordBreak: 'break-word',
-                maxHeight: '100px',
               }}
             >
               {item.description}
@@ -97,7 +102,7 @@ const HomePage = () => {
         {selectedId && (
           <motion.div
             layoutId={selectedId}
-            className="fixed lg:top-10 lg:left-1/3 lg:w-1/3 h-auto w-full top-1 left-1 bg-white p-8 rounded-xl flex flex-col items-center justify-center z-50"
+            className="fixed xl:top-10 xl:left-1/3 xl:w-1/3 h-auto max-h-8/9 w-full top-1 left-1 bg-white p-8 rounded-xl flex flex-col items-center justify-center z-50 border-4 border-black overflow-auto"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
