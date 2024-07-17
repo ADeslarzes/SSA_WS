@@ -6,9 +6,11 @@ import Link from 'next/link';
 import FooterSVGMobile from '@/components/FooterSVGMobile';
 import Image from 'next/image';
 import BGImage from '@/public/images/studio.png';
-import { motion, useScroll, useAnimation } from 'framer-motion';
+import { motion, useScroll, useAnimation, AnimatePresence } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import Torus from '@/components/Torus';
+import Projects from '@/components/Projects';
+
 
 export default function studionew() {
   const scrollRef = useRef(null);
@@ -24,6 +26,17 @@ export default function studionew() {
       console.log(isTargetInView);
     }
   };
+
+  {/* Informations for projects */}
+  const items = [
+    { id: 'weather', title: 'Weather Station', subtitle: 'Weather', link: '/project1', imageSrc: '/projects/satellite.avif', description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;' },
+    { id: 'collab1', title: 'Collaborative Innovation', subtitle: 'Innovation 1', link: '/project2', imageSrc: '/projects/satellite.avif', description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;' },
+    { id: 'collab2', title: 'Collaborative lopsum Innovation', subtitle: 'Innovation 2', link: '/project3', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: 'collab3', title: 'Collaborative Innovation', subtitle: 'Innovation 2', link: '/project3', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: 'collab4', title: 'Collaborative Innovation', subtitle: 'Innovation 2', link: '/project3', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: 'collab5', title: 'Collaborative Innovation', subtitle: 'Innovation 2', link: '/project3', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: 'collab6', title: 'Collaborative Innovation', subtitle: 'Innovation 2', link: '/project3', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' }
+  ];
 
   useEffect(() => {
     window.addEventListener('scroll', checkIsInView);
@@ -49,13 +62,16 @@ export default function studionew() {
       }
     }
   }, [isTargetInView]);
+  const [selectedId, setSelectedId] = useState(null);
 
+  const handleCardClick = (card) => {
+    setExpandedCard(expandedCard === card ? null : card);
+  };
   return (
     <div className="w-screen relative min-h-screen font-SctoGrotesk">
       <div className="h-screen w-screen"></div>
       <div className="h-screen fixed -z-10 top-0 w-screen bg-black flex items-center flex-col justify-center md:max-h-max">
         <div className="w-full z-20  p-9 md:p-16 absolute top-0 h-max flex justify-between items-center font-semibold">
-          <SolidLogo fillColor={'#fff'} />
           <div className="rounded-lg w-24 h-11 p-4 border-black text-black border-2 flex justify-center items-center">
             Login
           </div>
@@ -85,7 +101,9 @@ export default function studionew() {
             <div className="flex-grow">
               <div className="flex flex-col  max-w-[1500px]">
                 <div className="text-white mb-12 md:w-3/4 text-xl">
-                  Description of the association
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.
+                  Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.
                 </div>
               </div>
             </div>
@@ -102,116 +120,7 @@ export default function studionew() {
                   Here are some of the projects we are currently working on:
                 </div>
                 {/* Sliders */}
-                <div className="flex gap-5 overflow-x-auto whitespace-nowrap max-w-[800px]">
-                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
-                    <Link href="/project1" className='text-black font-semibold text-xl'>
-                      Integrating Weather 
-                    </Link>
-                    <img src="/projects/satellite.avif" alt="Satellite" className="w-full h-auto rounded-md mb-2"/>
-                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                    </p>
-                  </div>
-                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
-                    <p className="text-black font-semibold text-xl">
-                      Collaborative Innovation
-                    </p>
-                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
-                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                    </p>
-                  </div>
-                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
-                    <p className="text-black font-semibold text-xl">
-                      Collaborative Innovation
-                    </p>
-                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
-                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                    </p>
-                  </div>
-                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
-                    <p className="text-black font-semibold text-xl">
-                      Collaborative Innovation
-                    </p>
-                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
-                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                    </p>
-                  </div>
-                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
-                    <p className="text-black font-semibold text-xl">
-                      Collaborative Innovation
-                    </p>
-                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
-                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                    </p>
-                  </div>
-                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
-                    <p className="text-black font-semibold text-xl">
-                      Collaborative Innovation
-                    </p>
-                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
-                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                    </p>
-                  </div>
-                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
-                    <p className="text-black font-semibold text-xl">
-                      Collaborative Innovation
-                    </p>
-                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
-                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                    </p>
-                  </div>
-                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
-                    <p className="text-black font-semibold text-xl">
-                      Collaborative Innovation
-                    </p>
-                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
-                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                    </p>
-                  </div>
-                  <div className="w-372 h-[600] p-4 text-black rounded-xl bg-white ">
-                    <p className="text-black font-semibold text-xl">
-                      Collaborative Innovation
-                    </p>
-                      <img src="/projects/satellite.avif" alt="Collaborative Innovation" className="w-full h-auto rounded-md mb-2"/>
-                    <p className="text-black/40 max-w-[200px] max-h-[200px] overflow-hidden break-words" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                      We believe in the power of collaboration to drive innovation. 
-                      By harnessing diverse talents, we deliver transformative solutions for businesses. asfiveifgiwefg jeqigv VQW IDGV wdv ijsdV B dsjbj ifas b  
-                    </p>
-                  </div>
-                </div>
+                  <Projects items={items} selectedId={selectedId} setSelectedId={setSelectedId} />
                 {/* Add more slides as needed */}
               </div>
             </div>
