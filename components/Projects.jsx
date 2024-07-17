@@ -97,7 +97,7 @@ const HomePage = () => {
         {selectedId && (
           <motion.div
             layoutId={selectedId}
-            className="fixed top-10 left-60 w-1/3 h-auto bg-white p-8 rounded-xl flex flex-col items-center justify-center z-50"
+            className="fixed top-10 left-60 w-1/3 h-auto bg-white p-8 rounded-xl md:w-screen flex flex-col items-center justify-center z-50"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
