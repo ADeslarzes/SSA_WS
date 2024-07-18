@@ -62,25 +62,25 @@ export default function NavigationMenu() {
   }
 
   return (
-    <div className="font-SctoGrotesk fixed top-6 right-6">
+    <div className=" font-SctoGrotesk top-6 right-6 fixed">
       {/* Bottom nav bar */}
       <motion.div
-        initial={{ scale: 1, borderColor: 'transparent', opacity: 0, width: '10%', height: '10%' }}
-        animate={{ opacity: 1, width: IsMenuOpen ? 400 : 'auto', height: IsMenuOpen ? 400 : 'auto' }}
-        transition={{
-          type: 'spring',
-          stiffness: 180,
-          damping: 10,
-          delay: 0,
-        }}
-        onClick={() => {
-          if (!IsMenuOpen) setIsMenuOpen(true);
-        }}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-        whileHover={{ scale: 0.94, borderColor: '#FF0000' }}
-        className="bg-white shadow-md border-2 cursor-pointer rounded-lg inline-flex justify-start
-                   w-auto sm:w-[650px]"
+      initial={{ scale: 1, borderColor: 'transparent', opacity: 0, width: '10%', height: '10%' }}
+      animate={{ opacity: 1, width: IsMenuOpen ? 400 : 'auto', height: IsMenuOpen ? 400 : 'auto' }} // responsive button size
+      transition={{
+        type: 'spring',
+        stiffness: 180,
+        damping: 10,
+        delay: 0,
+      }}
+      onClick={() => {
+        if (IsMenuOpen === false) setIsMenuOpen(true);
+      }}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+      whileHover={{ scale: 0.94, borderColor: '#FF0000' }} // Shrinks and changes border color on hover
+      className="bg-white shadow-md border-2 cursor-pointer rounded-lg inline-flex justify-start
+                 w-auto sm:w-[650px]"
       >
         <AnimatePresence mode="popLayout">
           {!IsMenuOpen && (
