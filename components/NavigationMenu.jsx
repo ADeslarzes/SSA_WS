@@ -80,7 +80,7 @@ export default function NavigationMenu() {
       onMouseLeave={() => setIsHovering(false)}
       whileHover={{ scale: 0.94, borderColor: '#FF0000' }} // Shrinks and changes border color on hover
       className="bg-white shadow-md border-2 cursor-pointer rounded-lg inline-flex justify-start
-                 sm:w-auto md:w-[650px]"
+                 w-auto sm:w-[650px]"
       >
         <AnimatePresence mode="popLayout">
           {!IsMenuOpen && (
