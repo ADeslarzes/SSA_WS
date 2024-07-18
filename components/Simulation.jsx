@@ -36,15 +36,15 @@ const Simulation = ({ onLoad }) => {
     const geometry = new THREE.IcosahedronGeometry(2, detail);
     const material = new THREE.MeshPhongMaterial({
       map: loader.load('/earth/00_earthmap10k.jpg'),
-      specularMap: loader.load('/earth/02_earthspec1k.jpg'),
-      bumpMap: loader.load('/earth/01_earthbump1k.jpg'),
+      specularMap: loader.load('/earth/02_earthspec10k.jpg'),
+      bumpMap: loader.load('/earth/01_earthbump10k.jpg'),
       bumpScale: 4,
     });
     const earthMesh = new THREE.Mesh(geometry, material);
     earthGroup.add(earthMesh);
 
     const lightsMat = new THREE.MeshBasicMaterial({
-      map: loader.load('/earth/03_earthlights1k.jpg'),
+      map: loader.load('/earth/03_earthlights10k.jpg'),
       blending: THREE.AdditiveBlending,
     });
     const lightsMesh = new THREE.Mesh(geometry, lightsMat);
