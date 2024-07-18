@@ -66,7 +66,7 @@ export default function NavigationMenu() {
       {/* Bottom nav bar */}
       <motion.div
       initial={{ scale: 1, borderColor: 'transparent', opacity: 0, width: '10%', height: '10%' }}
-      animate={{ opacity: 1, width: IsMenuOpen ? '90%' : 'auto', height: IsMenuOpen ? '90%' : 'auto' }} // responsive button size
+      animate={{ opacity: 1, width: IsMenuOpen ? 400 : 'auto', height: IsMenuOpen ? 400 : 'auto' }} // responsive button size
       transition={{
         type: 'spring',
         stiffness: 180,
@@ -79,8 +79,8 @@ export default function NavigationMenu() {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       whileHover={{ scale: 0.94, borderColor: '#FF0000' }} // Shrinks and changes border color on hover
-      className="bg-white shadow-md mx-auto border-2 cursor-pointer rounded-lg inline-flex justify-start
-                 w-full sm:w-auto md:w-[650px] p-4"
+      className="bg-white shadow-md border-2 cursor-pointer rounded-lg inline-flex justify-start
+                 sm:w-auto md:w-[650px]"
       >
         <AnimatePresence mode="popLayout">
           {!IsMenuOpen && (
