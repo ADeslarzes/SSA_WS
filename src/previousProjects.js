@@ -1,0 +1,96 @@
+// src/projectItems.js
+
+const previousProject = [
+    { 
+      id: 'p1', 
+      title: 'Weather Station', 
+      subtitle: 'Weather Monitoring', 
+      date: '2012-02-10',
+      imageSrc: '/projects/satellite.avif', 
+      description: 'A weather station project that collects and analyzes atmospheric data to monitor weather conditions.',  
+      link: 'https://www.example.com',
+    },
+    { 
+      id: 'p2', 
+      title: 'Smart Irrigation System', 
+      subtitle: 'Agriculture', 
+      date: '2016-04-12',
+      imageSrc: '/ssa_logo/SSA_LOGO_FULL.png', 
+      description: 'An automated irrigation system that uses sensors to optimize water usage for crops, enhancing agricultural efficiency.',  
+      link: 'https://www.example.com'
+    },
+    { 
+      id: 'p3', 
+      title: 'Home Automation', 
+      subtitle: 'IoT', 
+      date: '2022-11-23',
+      imageSrc: '/projects/satellite.avif', 
+      description: 'A comprehensive home automation project that integrates various smart devices to improve household convenience and energy efficiency.',  
+      link: 'https://www.example.com',
+    },
+    { 
+      id: 'p4', 
+      title: 'Autonomous Drone', 
+      subtitle: 'Aerial Robotics', 
+      date: '2023-04-05',
+      imageSrc: '/ssa_logo/SSA_LOGO_FULL.png', 
+      description: 'An autonomous drone capable of navigating and performing tasks without human intervention, useful for surveillance and delivery services.',  
+      link: 'https://www.example.com',
+    },
+    { 
+      id: 'p5', 
+      title: 'AI-Powered Chatbot', 
+      subtitle: 'Artificial Intelligence', 
+      date: '2024-05-06',
+      imageSrc: '/projects/satellite.avif', 
+      description: 'An intelligent chatbot that uses natural language processing to interact with users, providing customer support and information.',  
+      link: 'https://www.example.com',
+    },
+    { 
+      id: 'p6', 
+      title: 'Fitness Tracker', 
+      subtitle: 'Health and Wellness', 
+      date: '2025-07-15',
+      imageSrc: '/ssa_logo/SSA_LOGO_FULL.png', 
+      description: 'A wearable fitness tracker that monitors physical activities and health metrics, helping users maintain a healthy lifestyle.',  
+      link: 'https://www.example.com',
+    },
+    { 
+      id: 'p7', 
+      title: 'Smart City Infrastructure', 
+      subtitle: 'Urban Development', 
+      date: '2026-09-20',
+      imageSrc: '/projects/satellite.avif', 
+      description: 'A smart city project aimed at improving urban infrastructure through the integration of technology and data analytics.',  
+      link: 'https://www.example.com',
+    },
+    { 
+      id: 'p8', 
+      title: 'Renewable Energy System', 
+      subtitle: 'Sustainable Energy', 
+      date: '2027-12-01',
+      imageSrc: '/ssa_logo/SSA_LOGO_FULL.png', 
+      description: 'A project focused on developing and implementing renewable energy systems, such as solar and wind power, to promote sustainability.',  
+      link: 'https://www.example.com',
+    },
+    { 
+      id: 'p9', 
+      title: 'Blockchain for Supply Chain', 
+      subtitle: 'Blockchain Technology', 
+      date: '2028-03-22',
+      imageSrc: '/projects/satellite.avif', 
+      description: 'A blockchain-based solution for supply chain management, enhancing transparency and traceability in the logistics industry.',  
+      link: 'https://www.example.com',
+    },
+    { 
+      id: 'p10', 
+      title: 'Virtual Reality Experience', 
+      subtitle: 'Immersive Technology', 
+      date: '2029-08-10',
+      imageSrc: '/ssa_logo/SSA_LOGO_FULL.png', 
+      description: 'A virtual reality project that creates immersive experiences for entertainment, education, and training purposes.',  
+      link: 'https://www.example.com',
+    }
+];
+
+export default previousProject;

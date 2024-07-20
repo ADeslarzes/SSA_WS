@@ -1,56 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const HomePage = () => {
-  const [selectedId, setSelectedId] = useState(null); // State to store the selected card ID
-
-  // Items array
-  const items = [{ 
-    id: '1', 
-    title: 'Weather Station', 
-    subtitle: 'Weather', 
-    imageSrc: '/projects/satellite.avif', 
-    description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curaeQuisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;',  
-    scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
-    prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.'
-  },
-  { 
-    id: '2', 
-    title: 'Weather Station', 
-    subtitle: 'Weather', 
-    imageSrc: '/projects/satellite.avif', 
-    description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;', 
-    scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
-    prerequisites: 'Basic knowledge in meteorology and electronics is required.'
-  },
-  { 
-    id: '3', 
-    title: 'Weather Station', 
-    subtitle: 'Weather', 
-    imageSrc: '/projects/satellite.avif', 
-    description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;', 
-    scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
-    prerequisites: 'Basic knowledge in meteorology and electronics is required.'
-  },
-  { 
-    id: '4', 
-    title: 'Weather Station', 
-    subtitle: 'Weather', 
-    imageSrc: '/projects/satellite.avif', 
-    description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;', 
-    scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
-    prerequisites: 'Basic knowledge in meteorology and electronics is required.'
-  },
-  { 
-    id: '5', 
-    title: 'Weather Station', 
-    subtitle: 'Weather', 
-    imageSrc: '/projects/satellite.avif', 
-    description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;', 
-    scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
-    prerequisites: 'Basic knowledge in meteorology and electronics is required.'
-  }
-  ];
+const Projects = ({ items, selectedId, setSelectedId }) => {
 
   return (
     // Define the space for scrolling cards (horizontaly)
@@ -156,4 +107,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Projects;
