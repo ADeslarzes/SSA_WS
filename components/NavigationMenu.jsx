@@ -34,7 +34,7 @@ export default function NavigationMenu() {
       id: 1,
       title: 'SSA',
       url: '/studio',
-      iconUrl: '/others/about-icon.png',
+      iconUrl: '/ssa_logo/SSA_LOGO_FULL.png',
       description: 'Learn more about us',
       navdescription: 'Learn more about us',
     },
@@ -70,7 +70,7 @@ export default function NavigationMenu() {
       transition={{
         type: 'spring',
         stiffness: 180,
-        damping: 10,
+        damping: 15,
         delay: 0,
       }}
       onClick={() => {
@@ -197,7 +197,7 @@ export default function NavigationMenu() {
                       <div>
                         <img
                           src={page.iconUrl}
-                          className="h-10 w-10"
+                          className="h-9 w-19"
                           alt={page.title}
                         />
                       </div>

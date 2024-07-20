@@ -28,15 +28,26 @@ export default function studionew() {
   };
 
   {/* Informations for projects */}
-  const items = [
-    { id: 'weather', title: 'Weather Station', subtitle: 'Weather', link: '/project1', imageSrc: '/projects/satellite.avif', description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;' },
-    { id: 'collab1', title: 'Collaborative Innovation', subtitle: 'Innovation 1', link: '/project2', imageSrc: '/projects/satellite.avif', description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;' },
-    { id: 'collab2', title: 'Collaborative lopsum Innovation', subtitle: 'Innovation 2', link: '/project3', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
-    { id: 'collab3', title: 'Collaborative Innovation', subtitle: 'Innovation 2', link: '/project3', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
-    { id: 'collab4', title: 'Collaborative Innovation', subtitle: 'Innovation 2', link: '/project3', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
-    { id: 'collab5', title: 'Collaborative Innovation', subtitle: 'Innovation 2', link: '/project3', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
-    { id: 'collab6', title: 'Collaborative Innovation', subtitle: 'Innovation 2', link: '/project3', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' }
+  const projects = [
+    { id: '1', title: 'Weather Station', subtitle: 'Weather', imageSrc: '/projects/satellite.avif', description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;' },
+    { id: '2', title: 'Collaborative Innovation', subtitle: 'Innovation 1', imageSrc: '/projects/satellite.avif', description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;' },
+    { id: '3', title: 'Collaborative lopsum Innovation', subtitle: 'Innovation 2', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: '4', title: 'Collaborative Innovation', subtitle: 'Innovation 2', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: '5', title: 'Collaborative Innovation', subtitle: 'Innovation 2', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: '6', title: 'Collaborative Innovation', subtitle: 'Innovation 2', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: '7', title: 'Collaborative Innovation', subtitle: 'Innovation 2', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' }
   ];
+
+  const sideprojects = [
+    { id: 's1', title: 'Weather Station', subtitle: 'Weather', imageSrc: '/projects/satellite.avif', description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;' },
+    { id: 's2', title: 'Collaborative Innovation', subtitle: 'Innovation 1', imageSrc: '/projects/satellite.avif', description: 'Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;' },
+    { id: 's3', title: 'Collaborative lopsum Innovation', subtitle: 'Innovation 2', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: 's4', title: 'Collaborative Innovation', subtitle: 'Innovation 2', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: 's5', title: 'Collaborative Innovation', subtitle: 'Innovation 2', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: 's6', title: 'Collaborative Innovation', subtitle: 'Innovation 2', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' },
+    { id: 's7', title: 'Collaborative Innovation', subtitle: 'Innovation 2', imageSrc: '/projects/satellite.avif', description: 'We believe in the power of collaboration to drive innovation. By harnessing diverse talents, we deliver transformative solutions for businesses.' }
+  ];
+
 
   useEffect(() => {
     window.addEventListener('scroll', checkIsInView);
@@ -93,7 +104,7 @@ export default function studionew() {
           animate={controls}
           className="w-screen min-h-screen -mt-16 rounded-2xl bg-black shadow-inner flex items-center flex-col md:max-h-max"
         >
-        {/*Description of the association*/}
+        {/* Description of the association */}
           <div className="mt-12  flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Groztec">
               ASSOCIATION
@@ -108,10 +119,10 @@ export default function studionew() {
               </div>
             </div>
           </div>
-        {/*Description of the projects*/}
+        {/* Main projects */}
           <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0 h-full md:sticky top-12 font-Groztec">
-              CURRENT PROJECTS
+              Main Projects
             </div>
             <div className="flex-grow">
               <div className="flex flex-col max-w-[1500px]">
@@ -119,13 +130,28 @@ export default function studionew() {
                   We are currently working on a number of projects that aim to render this world a better place. 
                   Here are some of the projects we are currently working on:
                 </div>
-                {/* Sliders */}
-                  <Projects items={items} selectedId={selectedId} setSelectedId={setSelectedId} />
-                {/* Add more slides as needed */}
+                {/* Slides */}
+                <Projects items={projects} selectedId={selectedId} setSelectedId={setSelectedId} />
               </div>
             </div>
           </div>
-          {/*Description of the team*/}
+        {/* Side projects */}
+          {/* <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
+            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0 h-full md:sticky top-12 font-Groztec">
+              Side Projects
+            </div>
+            <div className="flex-grow">
+              <div className="flex flex-col max-w-[1500px]">
+                <div className="text-white mb-12 md:w-3/4 text-xl">
+                  We are currently working on a number of side projects that aim to render this world a better place. 
+                  Here are some of the projects we are currently working on:
+                </div> */}
+                {/* Slides */}
+                <Projects items={sideprojects} selectedId={selectedId} setSelectedId={setSelectedId} />
+              {/* </div>
+            </div>
+          </div> */}
+        {/* Description of the team */}
           <div className="pt-14 md:pt-28 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px]  justify-between gap-x-[120px] mx-auto">
             <div className="text-[#B22222] mb-8 md:mb-0 text-3xl md:text-5xl w-[300px] h-full md:sticky top-12 font-Groztec">
               TEAM LEAD 
@@ -199,6 +225,7 @@ export default function studionew() {
               </div>
             </div>
           </div>
+          {/* Autre */}
           <div className="pt-14 md:pt-28  flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
             <div className="text-[#B22222] text-3xl mb-8 md:text-5xl w-[300px] md:sticky h-full top-12 font-Groztec">
               OUR SERVICES
