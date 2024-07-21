@@ -82,7 +82,7 @@ export default function studionew() {
         <NavigationMenu />
       </div>
 
-      <div className="bg-white rounded-t-2xl">
+      <div className="bg-black rounded-t-2xl">
         <motion.div
           id="toBeScaled"
           initial={{ scale: 1 }}
@@ -92,9 +92,7 @@ export default function studionew() {
         {/* Description of the association */}
           <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
-              ASSOCI- 
-              <br></br>
-              ATION
+              SSA
             </div>
             <div className="flex-grow">
               <div className="flex flex-col  max-w-[1500px]">
