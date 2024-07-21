@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nextui-org/button": "^2.0.34",
+    "@nextui-org/button": "^2.0.37",
+    "@nextui-org/system": "^2.2.5",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.425",
     "autoprefixer": "10.4.14",
@@ -17,8 +18,8 @@
     "next": "^14.2.5",
     "postcss": "8.4.27",
     "react": "18.2.0",
+    "react-chrono": "^2.6.1",
     "react-dom": "18.2.0",
-    "react-horizontal-timeline": "^1.5.3",
     "react-slick": "^0.30.2",
     "satellite.js": "^5.0.0",
     "slick-carousel": "^1.8.1",

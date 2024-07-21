@@ -15,7 +15,7 @@ export default function Torus() {
     
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.position.setZ(30);
+    camera.position.setZ(0);
     renderer.render(scene, camera);
     
     const geometry = new THREE.TorusKnotGeometry( 8, 2, 100, 100); 
@@ -35,9 +35,9 @@ export default function Torus() {
     function animate() {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
-      torus.rotation.x += 0.01;
-      torus.rotation.y += 0.005;
-      torus.rotation.z += 0.01;
+      torus.rotation.x += 0.003;
+      torus.rotation.y += 0.0007;
+      torus.rotation.z += 0.003;
     
       controls.update();
     
@@ -49,7 +49,7 @@ export default function Torus() {
 
   return (
     <div className="w-screen h-screen absolute inset-0 flex justify-center items-center z-20 bg-black">
-      <div className="flex justify-center items-center text-white animate-pulse">
+      <div className="flex justify-center items-center">
         <canvas id="bg"></canvas>
       </div>
     </div>

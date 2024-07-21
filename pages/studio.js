@@ -10,17 +10,16 @@ import { motion, useScroll, useAnimation, AnimatePresence } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react';
 import Torus from '@/components/Torus';
 import CardProjects from '@/components/CardProjects';
-import Slider from '@/components/TimeLineSlider';
+import TimeLine from '@/components/TimeLineSlider';
 import currentProjects from '@/src/currentProjects';
 import sideProjects from '@/src/sideProjects';
 import previousProjects from '@/src/previousProjects';
-
 
 export default function studionew() {
   const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll();
   const controls = useAnimation();
-  const [isTargetInView, setIsTargetInView] = useState(false);
+  const [isTargetInView, setIsTargetInView] = useState(true);
 
   const checkIsInView = () => {
     const target = document.getElementById('target');
@@ -30,10 +29,6 @@ export default function studionew() {
       console.log(isTargetInView);
     }
   };
-
-  {/* Informations for projects */}
-    
-
 
   useEffect(() => {
     window.addEventListener('scroll', checkIsInView);
@@ -77,17 +72,17 @@ export default function studionew() {
             Login
           </div>
         </div>
-      {/* Image du studio */}
+        {/* Image du studio */}
         <div>
           <Torus />
         </div>
       </div>
 
-      <div className="w-full px-8 fixed bottom-12 z-50">
+      <div>
         <NavigationMenu />
       </div>
 
-      <div className="bg-black md:bg-[#D9D9D9] rounded-t-2xl">
+      <div className="bg-white rounded-t-2xl">
         <motion.div
           id="toBeScaled"
           initial={{ scale: 1 }}
@@ -95,13 +90,15 @@ export default function studionew() {
           className="w-screen min-h-screen -mt-16 rounded-2xl bg-black shadow-inner flex items-center flex-col md:max-h-max"
         >
         {/* Description of the association */}
-          <div className="mt-12  flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
+          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
-              ASSOCIATION
+              ASSOCI- 
+              <br></br>
+              ATION
             </div>
             <div className="flex-grow">
               <div className="flex flex-col  max-w-[1500px]">
-                <div className="text-white mb-12 md:w-3/4 text-xl">
+                <div className="text-white mb-12 text-xl" style={{ Width: '90%' }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
                   Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.
                   Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.
@@ -115,7 +112,7 @@ export default function studionew() {
               Main Projects
             </div>
             <div className="flex-grow">
-              <div className="flex flex-col max-w-[1500px]">
+              <div className="flex flex-col" style={{ Width: '90%' }}>
                 <div className="text-white mb-12 md:w-3/4 text-xl">
                   We are currently working on a number of projects that aim to render this world a better place. 
                   Here are some of the projects we are currently working on:
@@ -131,7 +128,7 @@ export default function studionew() {
               Side Projects
             </div>
             <div className="flex-grow">
-              <div className="flex flex-col max-w-[1500px]">
+              <div className="flex flex-col" style={{ Width: '90%' }}>
                 <div className="text-white mb-12 md:w-3/4 text-xl">
                   We are currently working on a number of side projects that aim to render this world a better place. 
                   Here are some of the projects we are currently working on:
@@ -147,10 +144,9 @@ export default function studionew() {
               Timeline
             </div>
             <div className="flex-grow">
-              <div className="flex flex-col max-w-[1500px]">
-                {/* Slides */}
-                <Slider items={previousProjects} selectedId={previousSelectedId} setSelectedId={setPreviousSelectedId} />
-              </div>
+              {/* <div className="flex flex-col max-w-[1500px]">
+                <TimeLine selectedId={previousSelectedId} setSelectedId={setPreviousSelectedId} />
+              </div> */}
             </div>
           </div>
         {/* Description of the team */}

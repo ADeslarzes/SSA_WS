@@ -5,7 +5,7 @@ const Projects = ({ items, selectedId, setSelectedId }) => {
 
   return (
     // Define the space for scrolling cards (horizontaly)
-    <div className="flex gap-5 overflow-x-auto whitespace-nowrap max-w-[1000px]"> 
+    <div className="flex gap-5 overflow-x-auto whitespace-nowrap" style={{ maxWidth: '70%' }}> 
       {/* Initialisation of the cards */}
       {items.map(item => ( // Map through the items array
         <motion.div // Animate the card
