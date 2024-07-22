@@ -5,7 +5,7 @@ const Projects = ({ items, selectedId, setSelectedId }) => {
 
   return (
     // Define the space for scrolling cards (horizontaly)
-    <div className="flex gap-5 overflow-x-auto whitespace-nowrap" style={{ maxWidth: '70%' }}> 
+    <div className="flex gap-2 overflow-x-auto " style={{ maxWidth: '90%' }}> 
       {/* Initialisation of the cards */}
       {items.map(item => ( // Map through the items array
         <motion.div // Animate the card
@@ -22,7 +22,7 @@ const Projects = ({ items, selectedId, setSelectedId }) => {
           whileHover={{ scale: 0.96, borderColor: '#FF0000' }}  // Shrinks and changes border color on hover
         >
           {/* Title */}
-          <div className="text-black font-semibold middle text-xl mb-2"> 
+          <div className="text-black font-semibold text-xl mb-2"> 
             {item.title}
           </div>
           {/* Image and description */}
@@ -53,7 +53,7 @@ const Projects = ({ items, selectedId, setSelectedId }) => {
         {selectedId && (
           <motion.div
             layoutId={selectedId}
-            className="fixed xl:top-10 xl:left-1/3 xl:w-1/3 h-auto max-h-8/9 w-full top-1 left-1 bg-white p-8 rounded-xl flex flex-col items-center justify-center z-50 border-4 border-black overflow-auto"
+            className="fixed xl:left-1/2 xl:top-1/2 xl:left-1/3 xl:w-1/3 max-h-8/9 w-full top-1 left-1 bg-white p-8 rounded-xl flex flex-col items-center justify-center z-50 border-4 border-black overflow-auto"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}

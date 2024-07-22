@@ -65,13 +65,9 @@ export default function studionew() {
   };
   return (
     <div className="w-screen relative min-h-screen font-SctoGrotesk">
-      <div className="h-screen w-screen"></div>
+      <div className="h-screen w-screen"></div> {/* Space for Torus image */}
       <div className="h-screen fixed -z-10 top-0 w-screen bg-black flex items-center flex-col justify-center md:max-h-max">
-        <div className="w-full z-20  p-9 md:p-16 absolute top-0 h-max flex justify-between items-center font-semibold">
-          <div className="rounded-lg w-24 h-11 p-4 border-black text-black border-2 flex justify-center items-center">
-            Login
-          </div>
-        </div>
+        {/* <div className="w-full z-20  p-9 md:p-16 absolute top-0 h-max flex justify-between items-center font-semibold"></div> */}
         {/* Image du studio */}
         <div>
           <Torus />
@@ -82,7 +78,7 @@ export default function studionew() {
         <NavigationMenu />
       </div>
 
-      <div className="bg-black rounded-t-2xl">
+      <div className="bg-black md:bg-black rounded-t-2xl">
         <motion.div
           id="toBeScaled"
           initial={{ scale: 1 }}
@@ -106,33 +102,32 @@ export default function studionew() {
           </div>
         {/* Main projects */}
           <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
-            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0 h-full md:sticky top-12 font-Lato">
+            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
               Main Projects
             </div>
             <div className="flex-grow">
-              <div className="flex flex-col" style={{ Width: '90%' }}>
-                <div className="text-white mb-12 md:w-3/4 text-xl">
+              <div className="flex flex-col  max-w-[1500px]">
+                <div className="text-white mb-12 text-xl" style={{ Width: '90%' }}>
                   We are currently working on a number of projects that aim to render this world a better place. 
                   Here are some of the projects we are currently working on:
                 </div>
                 {/* Slides */}
-                <CardProjects items={currentProjects} selectedId={mainSelectedId} setSelectedId={setMainSelectedId} />
+                {/* <CardProjects items={currentProjects} selectedId={mainSelectedId} setSelectedId={setMainSelectedId} /> */}
               </div>
             </div>
           </div>
         {/* Side projects */}
           <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
-            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0 h-full md:sticky top-12 font-Lato">
+            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
               Side Projects
             </div>
             <div className="flex-grow">
-              <div className="flex flex-col" style={{ Width: '90%' }}>
-                <div className="text-white mb-12 md:w-3/4 text-xl">
-                  We are currently working on a number of side projects that aim to render this world a better place. 
-                  Here are some of the projects we are currently working on:
+              <div className="flex flex-col  max-w-[1500px]">
+                <div className="text-white mb-12 text-xl" style={{ Width: '90%' }}>
+                  We are currently working on a number of side projects that aim to render this world a better place. Here are some of the projects we are currently working on:
                 </div>
                 {/* Slides */}
-                <CardProjects items={sideProjects} selectedId={sideSelectedId} setSelectedId={setSideSelectedId} />
+                {/* <CardProjects items={sideProjects} selectedId={sideSelectedId} setSelectedId={setSideSelectedId} /> */}
               </div>
             </div>
           </div>
