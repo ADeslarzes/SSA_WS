@@ -13,6 +13,7 @@
     "@nextui-org/system": "^2.2.5",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.425",
+    "@syncfusion/ej2-react-layouts": "^26.1.38",
     "autoprefixer": "10.4.14",
     "framer-motion": "^10.18.0",
     "next": "^14.2.5",

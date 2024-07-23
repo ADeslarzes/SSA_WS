@@ -10,7 +10,7 @@ import { motion, useScroll, useAnimation, AnimatePresence } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react';
 import Torus from '@/components/Torus';
 import CardProjects from '@/components/CardProjects';
-import TimeLine from '@/components/TimeLineSlider';
+import HorizontalTimeline from '@/components/TimeLineSlider';
 import currentProjects from '@/src/currentProjects';
 import sideProjects from '@/src/sideProjects';
 import previousProjects from '@/src/previousProjects';
@@ -86,7 +86,7 @@ export default function studionew() {
           className="w-screen min-h-screen -mt-16 rounded-2xl bg-black shadow-inner flex items-center flex-col md:max-h-max"
         >
         {/* Description of the association */}
-          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
+          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
               SSA
             </div>
@@ -101,23 +101,26 @@ export default function studionew() {
             </div>
           </div>
         {/* Main projects */}
-          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
+          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
               Main Projects
             </div>
             <div className="flex-grow">
               <div className="flex flex-col  max-w-[1500px]">
-                <div className="text-white mb-12 text-xl" style={{ Width: '90%' }}>
+                <div className="text-white mb-12 text-xl" style={{ maxWidth: '90%' }}>
                   We are currently working on a number of projects that aim to render this world a better place. 
                   Here are some of the projects we are currently working on:
                 </div>
-                {/* Slides */}
-                {/* <CardProjects items={currentProjects} selectedId={mainSelectedId} setSelectedId={setMainSelectedId} /> */}
+                {/* A carousel on which we can select cards and expend them, here is an example https://keen-slider.io/examples#examples */}
+                {/* <CardProjects items={currentProjects} selectedId={mainSelectedId} setSelectedId={setMainSelectedId}/> */}
+                <div style={{ width: '80%', margin: '0 auto' }}>
+                  <h1 className='text-white'>Not available yet</h1>
+                </div>
               </div>
             </div>
           </div>
         {/* Side projects */}
-          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
+          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
               Side Projects
             </div>
@@ -126,8 +129,11 @@ export default function studionew() {
                 <div className="text-white mb-12 text-xl" style={{ Width: '90%' }}>
                   We are currently working on a number of side projects that aim to render this world a better place. Here are some of the projects we are currently working on:
                 </div>
-                {/* Slides */}
+                {/* A carousel on which we can select cards and expend them, here is an example https://keen-slider.io/examples#examples */}
                 {/* <CardProjects items={sideProjects} selectedId={sideSelectedId} setSelectedId={setSideSelectedId} /> */}
+                <div style={{ width: '80%', margin: '0 auto' }}>
+                  <h1 className='text-white'>Not available yet</h1>
+                </div>
               </div>
             </div>
           </div>
@@ -137,9 +143,9 @@ export default function studionew() {
               Timeline
             </div>
             <div className="flex-grow">
-              {/* <div className="flex flex-col max-w-[1500px]">
-                <TimeLine selectedId={previousSelectedId} setSelectedId={setPreviousSelectedId} />
-              </div> */}
+              <div className="flex flex-col max-w-[1500px]">
+                <HorizontalTimeline/>
+              </div>
             </div>
           </div>
         {/* Description of the team */}
