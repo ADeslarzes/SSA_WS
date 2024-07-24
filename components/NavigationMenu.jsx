@@ -62,7 +62,7 @@ export default function NavigationMenu() {
   }
 
   return (
-    <div className=" font-SctoGrotesk top-6 right-6 fixed">
+    <div className=" font-SctoGrotesk top-6 right-8 fixed">
       {/* NavBar */}
       <motion.div
       initial={{ scale: 1, borderColor: 'black', opacity: 0, width: '10%', height: '10%' }}

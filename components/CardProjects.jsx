@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Projects = ({ items, selectedId, setSelectedId }) => {
   return (
     // Define the space for scrolling cards horizontally
-    <div className="flex gap-2 overflow-x-auto" style={{ maxWidth: '90%' }}>
+    <div className="flex gap-2 overflow-x-auto max-w-[1500px]" style={{ maxWidth: '90%' }}>
       {/* Initialization of the cards */}
       {items.map(item => (
         <motion.div
