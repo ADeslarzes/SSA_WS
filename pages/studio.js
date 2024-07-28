@@ -111,7 +111,7 @@ export default function studionew() {
                   
                 </div>
                 {/* A carousel on which we can select cards and expend them, here is an example https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/v6/misc/carousel/react?file=/src/App.js */}
-                  <CardProjects items={currentProjects} selectedId={mainSelectedId} setSelectedId={setMainSelectedId}/>
+                  {/*<CardProjects items={currentProjects} selectedId={mainSelectedId} setSelectedId={setMainSelectedId}/>*/}
                 {/* <div style={{ width: '80%', margin: '0 auto' }}>
                   <h1 className='text-white'>Not available yet</h1>
                 </div> */}
