@@ -134,7 +134,7 @@ const Simulation = ({ onLoad }) => {
       satelliteOrbitData.push({ group: satelliteGroup, satrec: satrec });
     }
 
-    fetch('/data/TLE_Heavy.json')
+    fetch('/data/TLE_Light.json')
       .then(response => response.json())
       .then(data => {
         Object.entries(data).forEach(([name, sat]) => {
