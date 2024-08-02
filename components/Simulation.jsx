@@ -80,36 +80,36 @@ const Simulation = ({ onLoad }) => {
     const satelliteOrbitData = [];
     
     // Function to create a text sprite
-    // function createTextSprite(text) {
-    //   const canvas = document.createElement('canvas');
-    //   const context = canvas.getContext('2d');
+    function createTextSprite(text) {
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
       
-    //   // Set font and measure text width
-    //   context.font = '60px Arial';
-    //   const textMetrics = context.measureText(text);
-    //   const textWidth = textMetrics.width;
+      // Set font and measure text width
+      context.font = '60px Arial';
+      const textMetrics = context.measureText(text);
+      const textWidth = textMetrics.width;
       
-    //   // Adjust canvas size based on text width and set height
-    //   canvas.width = textWidth;
-    //   canvas.height = 64; // Adjust height to fit the text
+      // Adjust canvas size based on text width and set height
+      canvas.width = textWidth;
+      canvas.height = 64; // Adjust height to fit the text
       
-    //   // Set font and fill style again after canvas resize
-    //   context.font = '48px Arial';
-    //   context.fillStyle = 'white';
+      // Set font and fill style again after canvas resize
+      context.font = '48px Arial';
+      context.fillStyle = 'white';
       
-    //   // Draw text centered on the canvas
-    //   context.fillText(text, 0, 38); // Adjust Y position to vertically center text
+      // Draw text centered on the canvas
+      context.fillText(text, 0, 38); // Adjust Y position to vertically center text
       
-    //   const texture = new THREE.CanvasTexture(canvas);
-    //   const spriteMaterial = new THREE.SpriteMaterial({ map: texture });
-    //   const sprite = new THREE.Sprite(spriteMaterial);
+      const texture = new THREE.CanvasTexture(canvas);
+      const spriteMaterial = new THREE.SpriteMaterial({ map: texture });
+      const sprite = new THREE.Sprite(spriteMaterial);
       
-    //   // Adjust scale to your needs, keeping aspect ratio
-    //   const aspectRatio = canvas.width / canvas.height;
-    //   sprite.scale.set(aspectRatio * 0.1, 0.1, 1); // Adjusted scaling for better fit
+      // Adjust scale to your needs, keeping aspect ratio
+      const aspectRatio = canvas.width / canvas.height;
+      sprite.scale.set(aspectRatio * 0.1, 0.1, 1); // Adjusted scaling for better fit
 
-    //   return sprite;
-    // } 
+      return sprite;
+    } 
 
     function addSatellite(tle, name, color) {
       const satelliteGroup = new THREE.Group();
@@ -122,9 +122,9 @@ const Simulation = ({ onLoad }) => {
         roughness: 0,
       });
 
-      // const nameSprite = createTextSprite(name);
-      // nameSprite.position.set(0, 0.05, 0); // Position the label slightly above the satellite
-      // satelliteGroup.add(nameSprite);
+      const nameSprite = createTextSprite(name);
+      nameSprite.position.set(0, 0.05, 0); // Position the label slightly above the satellite
+      satelliteGroup.add(nameSprite);
 
       const satelliteMesh = new THREE.Mesh(satelliteGeometry, satelliteMaterial);
       satelliteGroup.add(satelliteMesh);
