@@ -66,7 +66,10 @@ export default function NavigationMenu() {
       {/* NavBar */}
       <motion.div
       initial={{ scale: 1, borderColor: 'black', opacity: 0, width: '10%', height: '10%' }}
-      animate={{ opacity: 1, width: IsMenuOpen ? 400 : 'auto', height: IsMenuOpen ? 400 : 'auto' }} // responsive button size
+      animate={{ opacity: 1,
+        width: IsMenuOpen ? (window.innerWidth <= 640 ? 300 : 400) : 'auto', // Change width based on screen size
+        height: IsMenuOpen ? (window.innerWidth <= 640 ? 300 : 400) : 'auto', // Change height based on screen size
+      }}
       transition={{
         type: 'spring',
         stiffness: 180,

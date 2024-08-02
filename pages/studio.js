@@ -107,8 +107,12 @@ export default function studionew() {
             <div className="flex-grow">
               <div className="flex flex-col max-w-[1500px]">
                 <div className="text-white mb-12 text-xl" style={{ maxWidth: '90%' }}>
-                  Here are some of the projects we are currently working on:We are currently working on a number of projects that aim to render this world a better place. We are currently working on a number of projects that aim to render this world a better place. Here are some of the projects we are currently working on:We are currently working on a number of projects that aim to render this world a better place. We are currently working on a number of projects that aim to render this world a better place. 
-                  
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+                  Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
+                  Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+                  Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. 
+                  In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
                 </div>
                 {/* A carousel on which we can select cards and expend them, here is an example https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/v6/misc/carousel/react?file=/src/App.js */}
                   {/*<CardProjects items={currentProjects} selectedId={mainSelectedId} setSelectedId={setMainSelectedId}/>*/}
@@ -126,7 +130,12 @@ export default function studionew() {
             <div className="flex-grow break-all">
               <div className="flex flex-col break-all ">
                 <div className="text-white break-all mb-12 text-xl" style={{ Width: '90%' }}>
-                  We are currently working on a number of side projects that aim to render this world a better place. Here are some of the projects we are currently working on:
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+                  Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
+                  Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+                  Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. 
+                  In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
                 </div>
                 {/* A carousel on which we can select cards and expend them, here is an example https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/v6/misc/carousel/react?file=/src/App.js */}
                   {/* <CardProjects items={sideProjects} selectedId={sideSelectedId} setSelectedId={setSideSelectedId} /> */}
@@ -141,30 +150,38 @@ export default function studionew() {
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0 h-full md:sticky top-12 font-Lato">
               Timeline
             </div>
-            <div className="flex-grow">
-              <div className="flex flex-col max-w-[1500px]">
-                {/* An horizontal time line that we can scroll and expend the evenment we want */}
-                <HorizontalTimeline/>
+            <div className="flex-grow break-all">
+              <div className="flex flex-col break-all ">
+                <div className="text-white break-all mb-12 text-xl" style={{ Width: '90%' }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+                  Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
+                  Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+                  Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. 
+                  In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
+                </div>
+                {/* A carousel on which we can select cards and expend them, here is an example https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/v6/misc/carousel/react?file=/src/App.js */}
+                  {/* <CardProjects items={sideProjects} selectedId={sideSelectedId} setSelectedId={setSideSelectedId} /> */}
+                <div style={{ width: '80%', margin: '0 auto' }}>
+                  <h1 className='text-white'>Not available yet</h1>
+                </div>
               </div>
             </div>
           </div>
         {/* Description of the team */}
           <div className="pt-14 md:pt-28 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px]  justify-between gap-x-[120px] mx-auto">
             <div className="text-[#B22222] mb-8 md:mb-0 text-3xl md:text-5xl w-[300px] h-full md:sticky top-12 font-Lato">
-              TEAM LEAD 
+              Team Lead
             </div>
             <div className="flex-grow">
               <div className="flex flex-col  max-w-[1500px]">
                 <div className="text-white mb-12 md:w-3/4 text-xl">
-                  Our team consists of members with diverse backgrounds,
-                  including designers, technologists, and researchers. This
-                  unique blend of expertise empowers us to create innovative
-                  solutions that pair cutting-edge technology with intuitive
-                  user experiences. With a primary focus on blockchain
-                  technology, and years of experience across a variety of
-                  industries, we are committed to pushing the boundaries of
-                  what's possible, constantly redefining the landscape of
-                  digital innovation.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+                  Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
+                  Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+                  Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. 
+                  In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
                 </div>
                 <div className="flex  gap-5 flex-col lg:flex-row">
                   {/* Josué */}
@@ -207,10 +224,33 @@ export default function studionew() {
               </div>
             </div>
           </div>
+        {/* Collaboration */}
+          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
+            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
+              Collaborations
+            </div>
+            <div className="flex-grow break-all">
+              <div className="flex flex-col break-all ">
+                <div className="text-white break-all mb-12 text-xl" style={{ Width: '90%' }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+                  Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
+                  Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
+                  Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. 
+                  In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
+                </div>
+                {/* A carousel on which we can select cards and expend them, here is an example https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/v6/misc/carousel/react?file=/src/App.js */}
+                  {/* <CardProjects items={sideProjects} selectedId={sideSelectedId} setSelectedId={setSideSelectedId} /> */}
+                <div style={{ width: '80%', margin: '0 auto' }}>
+                  <h1 className='text-white'>Not available yet</h1>
+                </div>
+              </div>
+            </div>
+          </div>
         {/* Find us */}
           <div className="pt-14 md:pt-28  flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between  mx-auto">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] md:sticky top-12 font-Lato">
-              FIND US
+              Find us 
             </div>
             
           </div>
