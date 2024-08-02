@@ -8,11 +8,12 @@ import BGImage from '@/public/images/studio.png';
 import { motion, useScroll, useAnimation, AnimatePresence } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import Torus from '@/components/Torus';
-import CardProjects from '@/components/CardProjects';
+import Carousel from '@/components/CardProjects';
 import currentProjects from '@/src/currentProjects';
 import sideProjects from '@/src/sideProjects';
 import previousProjects from '@/src/previousProjects';
 import HorizontalTimeline from '@/components/TimeLineSlider';
+import image1 from '@/public/images/satellite.png';
 
 export default function studionew() {
   const scrollRef = useRef(null);
@@ -28,6 +29,15 @@ export default function studionew() {
       console.log(isTargetInView);
     }
   };
+  const slides = [
+    { image: image1, alt: 'Slide 1' },
+    { image: image1, alt: 'Slide 2' },
+    { image: image1, alt: 'Slide 3' },
+    { image: image1, alt: 'Slide 4' },
+    { image: image1, alt: 'Slide 5' },
+    { image: image1, alt: 'Slide 6' },
+    { image: image1, alt: 'Slide 7' },
+  ];
 
   useEffect(() => {
     window.addEventListener('scroll', checkIsInView);
@@ -105,17 +115,16 @@ export default function studionew() {
               Main Projects
             </div>
             <div className="flex-grow">
-              <div className="flex flex-col max-w-[1500px]">
-                <div className="text-white mb-12 text-xl" style={{ maxWidth: '90%' }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
-                  Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
-                  Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
-                  Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. 
-                  In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
+              <div className="flex flex-col  max-w-[1500px]">
+                <div className="text-white mb-12 text-xl" style={{ Width: '90%' }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.
+                  Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.
                 </div>
                 {/* A carousel on which we can select cards and expend them, here is an example https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/v6/misc/carousel/react?file=/src/App.js */}
-                  {/*<CardProjects items={currentProjects} selectedId={mainSelectedId} setSelectedId={setMainSelectedId}/>*/}
+                <div className='bg-white'>
+                  <Carousel />
+                </div>
                 {/* <div style={{ width: '80%', margin: '0 auto' }}>
                   <h1 className='text-white'>Not available yet</h1>
                 </div> */}
@@ -133,15 +142,14 @@ export default function studionew() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
                   Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
                   Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
-                  Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. 
-                  In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
                 </div>
                 {/* A carousel on which we can select cards and expend them, here is an example https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/v6/misc/carousel/react?file=/src/App.js */}
-                  {/* <CardProjects items={sideProjects} selectedId={sideSelectedId} setSelectedId={setSideSelectedId} /> */}
-                <div style={{ width: '80%', margin: '0 auto' }}>
+                {/* <div>
+                  <CardProjects items={sideProjects} selectedId={sideSelectedId} setSelectedId={setSideSelectedId} />
+                </div> */}
+                {/* <div style={{ width: '80%', margin: '0 auto' }}>
                   <h1 className='text-white'>Not available yet</h1>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -156,9 +164,6 @@ export default function studionew() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
                   Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
                   Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
-                  Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. 
-                  In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
                 </div>
                 {/* A carousel on which we can select cards and expend them, here is an example https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/v6/misc/carousel/react?file=/src/App.js */}
                   {/* <CardProjects items={sideProjects} selectedId={sideSelectedId} setSelectedId={setSideSelectedId} /> */}
@@ -169,19 +174,15 @@ export default function studionew() {
             </div>
           </div>
         {/* Description of the team */}
-          <div className="pt-14 md:pt-28 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px]  justify-between gap-x-[120px] mx-auto">
-            <div className="text-[#B22222] mb-8 md:mb-0 text-3xl md:text-5xl w-[300px] h-full md:sticky top-12 font-Lato">
-              Team Lead
+        <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
+            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
+              Team
             </div>
             <div className="flex-grow">
               <div className="flex flex-col  max-w-[1500px]">
-                <div className="text-white mb-12 md:w-3/4 text-xl">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
-                  Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
-                  Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. 
-                  Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-                  Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. 
-                  In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
+                <div className="text-white mb-12 text-xl" style={{ Width: '90%' }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.
                 </div>
                 <div className="flex  gap-5 flex-col lg:flex-row">
                   {/* Josué */}
@@ -227,7 +228,7 @@ export default function studionew() {
         {/* Collaboration */}
           <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
-              Collaborations
+              Collabs
             </div>
             <div className="flex-grow break-all">
               <div className="flex flex-col break-all ">

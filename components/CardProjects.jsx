@@ -1,109 +1,47 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Card, Button } from 'react-bootstrap';
 
-const Projects = ({ items, selectedId, setSelectedId }) => {
+const ExpandableCard = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
-    // Define the space for scrolling cards horizontally
-    <div className="flex gap-2 overflow-x-auto max-w-[1500px]" style={{ maxWidth: '90%' }}>
-      {/* Initialization of the cards */}
-      {items.map(item => (
-        <motion.div
-          key={item.id}
-          layoutId={item.id}
-          className="p-4 text-black border-2 rounded-xl bg-white"
-          onClick={() => setSelectedId(item.id)}
-          style={{
-            height: '400px',
-            width: '312px',
-            flex: '0 0 auto'  // Ensure the card does not shrink or grow
-          }}
-          initial={{ scale: 1, borderColor: 'transparent' }}
-          whileHover={{ scale: 0.96, borderColor: '#FF0000' }}  // Shrinks and changes border color on hover
-        >
-          {/* Title */}
-          <div className="text-black font-semibold text-xl mb-2">
-            {item.title}
-          </div>
-          {/* Image and description */}
-          <motion.div>
-            <img
-              src={item.imageSrc}
-              alt={item.title}
-              className="h-1/2 w-full object-cover rounded-md mb-2"
-            />
-            <motion.p
-              className="text-black/70 overflow-hidden"
-              style={{
-                display: '-webkit-box',
-                WebkitBoxOrient: 'vertical',
-                WebkitLineClamp: 7,  // Limits the text to 7 lines
-                overflow: 'hidden',
-                whiteSpace: 'normal',
-                wordBreak: 'break-word',
-              }}
-            >
-              {item.description}
-              {selectedId === item.id && ' Additional text goes here when the card is expanded.'}
-            </motion.p>
-          </motion.div>
-        </motion.div>
-      ))}
-      <AnimatePresence>
-        {selectedId && (
-          <motion.div
-            layoutId={selectedId}
-            className="fixed xl:left-1/2 xl:top-1/2 xl:w-1/3 max-h-8/9 w-full top-1 left-1 bg-white p-8 rounded-xl flex flex-col items-center justify-center z-50 border-4 border-black overflow-auto"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-          >
-            {items.map(item => (
-              item.id === selectedId && (
-                <div key={item.id} className="w-full h-full flex flex-col">
-                  <motion.h1 className="text-black font-bold underline text-3xl mb-2">{item.title}</motion.h1>
-                  <motion.h2 className="font-semibold">{item.subtitle}</motion.h2>
-                  <motion.img src={item.imageSrc} alt={item.title} className="w-1/2 h-auto rounded-md mb-2" />
-                  <motion.h2 className="font-semibold">Context :</motion.h2>
-                  <motion.p className="text-black/80 overflow-auto" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                    {item.description}
-                  </motion.p>
-                  <motion.h2 className="font-semibold">Project scope :</motion.h2>
-                  <motion.p className="text-black/80 overflow-auto" style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
-                    {item.scope}
-                  </motion.p>
-                  <motion.h2 className="font-semibold">Prerequisites :</motion.h2>
-                  <motion.ul
-                    className="text-black/80 overflow-auto list-disc list-inside ml-4"
-                    style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1, transition: { duration: 0.5 } }}
-                    exit={{ opacity: 0, transition: { duration: 0.5 } }}
-                  >
-                    {item.prerequisites.split('. ').map((point, index) => (
-                      point.trim() && <li key={index}>{point.trim()}</li>
-                    ))}
-                  </motion.ul>
-                  <div className="flex justify-center">
-                    <motion.button
-                      onClick={() => setSelectedId(null)}
-                      className="w-32 px-4 py-2 bg-black text-white font-bold rounded-lg shadow-lg hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all duration-300 ease-in-out"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1, transition: { duration: 0.5 } }}
-                      exit={{ opacity: 0, transition: { duration: 0.5 } }}
-                    >
-                      Close
-                    </motion.button>
-                  </div>
-                </div>
-              )
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+    <Card
+      style={{
+        width: '30%',
+        margin: '20px auto',
+        borderRadius: '25px',
+        overflow: 'hidden',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        border: '5px solid white',
+        height: isExpanded ? 'auto' : '400px',
+        transition: 'height 0.3s ease',
+      }}
+    >
+      <Card.Img
+        variant="top"
+        src="./images/satellite.png"
+        style={{ borderTopLeftRadius: '20px', borderTopRightRadius: '20px', height: '200px', objectFit: 'cover' }}
+      />
+      <Card.Body className="text-center" style={{ overflowY: isExpanded ? 'visible' : 'auto', maxHeight: isExpanded ? 'none' : 'calc(100% - 200px)' }}>
+        <Card.Title className="font-bold underline">Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content. Some quick example text to build on the
+          card title and make up the bulk of the card's content. Some quick
+          example text to build on the card title and make up the bulk of the
+          card's content. Some quick example text to build on the card title and
+          make up the bulk of the card's content.
+        </Card.Text>
+        <Button variant="outlined" className="mx-auto d-block" onClick={toggleExpand}>
+          {isExpanded ? 'Collapse' : 'More'}
+        </Button>
+      </Card.Body>
+    </Card>
   );
 };
 
-export default Projects;
+export default ExpandableCard;

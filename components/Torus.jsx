@@ -45,6 +45,18 @@ export default function Torus() {
     }
     
     animate();
+
+    // Handle window resize
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+    return () => {
+      window.removeEventListener('resize', onWindowResize);
+      controls.dispose(); // Clean up controls to avoid memory leaks
+    };
+    
   }, [])
 
   return (
