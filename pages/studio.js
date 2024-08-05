@@ -8,13 +8,13 @@ import BGImage from '@/public/images/studio.png';
 import { motion, useScroll, useAnimation, AnimatePresence } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import Torus from '@/components/Torus';
-import Carousel from '@/components/CardProjects';
 import currentProjects from '@/src/currentProjects';
 import sideProjects from '@/src/sideProjects';
 import previousProjects from '@/src/previousProjects';
 import HorizontalTimeline from '@/components/TimeLineSlider';
 import image1 from '@/public/images/satellite.png';
 import LinkTree from '@/components/LinkTree';
+import CardCarousel from '@/components/CardCarousel';
 
 export default function studionew() {
   const scrollRef = useRef(null);
@@ -123,8 +123,8 @@ export default function studionew() {
                   Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.
                 </div>
                 {/* A carousel on which we can select cards and expend them, here is an example https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/v6/misc/carousel/react?file=/src/App.js */}
-                <div >
-                  <Carousel />
+                <div>
+                  <CardCarousel cardsData={currentProjects} />
                 </div>
                 {/* <div style={{ width: '80%', margin: '0 auto' }}>
                   <h1 className='text-white'>Not available yet</h1>
