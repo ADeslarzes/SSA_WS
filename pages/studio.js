@@ -14,6 +14,7 @@ import sideProjects from '@/src/sideProjects';
 import previousProjects from '@/src/previousProjects';
 import HorizontalTimeline from '@/components/TimeLineSlider';
 import image1 from '@/public/images/satellite.png';
+import LinkTree from '@/components/LinkTree';
 
 export default function studionew() {
   const scrollRef = useRef(null);
@@ -253,7 +254,7 @@ export default function studionew() {
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] md:sticky top-12 font-Lato">
               Find us 
             </div>
-            
+            <LinkTree />
           </div>
         </motion.div>
       </div>
