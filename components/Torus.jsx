@@ -52,6 +52,8 @@ export default function Torus() {
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     }
+    window.addEventListener('resize', onWindowResize);
+
     return () => {
       window.removeEventListener('resize', onWindowResize);
       controls.dispose(); // Clean up controls to avoid memory leaks
