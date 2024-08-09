@@ -46,6 +46,22 @@ export default function NavigationMenu() {
       description: 'Open access to database',
       navdescription: 'Open access to database',
     },
+    {
+      id: 3,
+      title: 'Projects',
+      url: '/projects',
+      iconUrl: '/others/Bulbe.jpg',
+      description: 'Get a look to current and past projects',
+      navdescription: 'Current and past projects',
+    },
+    {
+      id: 4,
+      title: 'Programs',
+      url: '/programs',
+      iconUrl: '/others/Bulbe.jpg',
+      description: 'Access to our open source programs',
+      navdescription: 'Access to our open source programs',
+    },
   ];
 
   // useEffect to get current url every time a new page is loaded
@@ -158,7 +174,7 @@ export default function NavigationMenu() {
                   }}
                   className="flex justify-between items-center w-full h-[72px]  px-5"
                 >
-                  <Link href="/" className=" font-semibold text-lg text-black">
+                  <Link href="/" className="font-semibold text-lg text-black">
                     {currentPage.title}
                   </Link>
                   <div
@@ -207,7 +223,7 @@ export default function NavigationMenu() {
                       <div className="flex-grow text-[#1c1c1c] flex ">
                         <div className="px-4 w-28">{page.title}</div>
                         <div className="px-4 hidden md:block">/</div>
-                        <div className="px-4 hidden md:block">
+                        <div className="px-1 hidden md:block">
                           {page.navdescription}
                         </div>
                       </div>
@@ -250,9 +266,10 @@ export default function NavigationMenu() {
                 {/* <div className="font-semibold w-full text-black text-center md:text-left text-lg mb-5 md:mb-2 leading-none">
                   Building the digital <br className="hidden md:block" /> future
                 </div> */}
-                <div className="rounded-lg flex-shrink-0 mb-5 md:mb-0 font-semibold w-max h-11 p-4 border-black/20 text-black border-[1px] flex justify-center items-center">
+                {/* Chat with us component */}
+                {/* <div className="rounded-lg flex-shrink-0 mb-5 md:mb-0 font-semibold w-max h-11 p-4 border-black/20 text-black border-[1px] flex justify-center items-center">
                   Chat with us
-                </div>
+                </div> */}
               </motion.div>
             </motion.div>
           )}
