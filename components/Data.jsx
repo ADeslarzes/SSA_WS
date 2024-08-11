@@ -1,14 +1,18 @@
-import React, { useEffect } from 'react';
-
+import React, { useEffect, useState } from 'react';
+import tleData from '/public/data/TLE_Light.json';
 // Function to format TLE data (array) into a table
-function formatTLEData(tleData) {
+function formatTLEData() {
+  const transformedData = Object.keys(tleData).map(key => ({
+    name: key,
+    tle1: tleData[key].tle[0],
+    tle2: tleData[key].tle[1],
+    color: tleData[key].color,
+  }));
   // Generate table rows from the TLE data
-  const rows = Object.keys(tleData).map((name, index) => (
-    <tr key={index}>
-      <td className="border px-4 py-2">{name}</td>
-      <td className="border px-4 py-2 whitespace-pre-wrap">
-        {tleData[name].tle[0]}<br />{tleData[name].tle[1]}
-      </td>
+  const rows = Object.keys(tleData).map(key => (
+    <tr>
+      <td className="border px-4 py-2">{key}</td>
+      <td className="border px-4 py-2 whitespace-pre-wrap">{tleData[key].tle[0]}<br/>{tleData[key].tle[1]}</td>
     </tr>
   ));
 
