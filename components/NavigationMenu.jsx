@@ -48,14 +48,6 @@ export default function NavigationMenu() {
     },
     {
       id: 3,
-      title: 'Projects',
-      url: '/projects',
-      iconUrl: '/others/Bulbe.jpg',
-      description: 'Get a look to current and past projects',
-      navdescription: 'Current and past projects',
-    },
-    {
-      id: 4,
       title: 'Programs',
       url: '/programs',
       iconUrl: '/others/Bulbe.jpg',
