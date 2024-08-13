@@ -10,7 +10,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '02.10.2024' 
     },
     { 
       id: '2', 
@@ -21,7 +22,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '04.10.2024' 
     },
     { 
       id: '3', 
@@ -32,7 +34,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '07.10.2024' 
     },
     { 
       id: '4', 
@@ -43,7 +46,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '09.10.2024' 
     },
     { 
       id: '5', 
@@ -54,7 +58,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '12.10.2024' 
     },
     { 
       id: '6', 
@@ -65,7 +70,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '15.10.2024' 
     },
     { 
       id: '7', 
@@ -76,7 +82,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '20.10.2024' 
     },
     { 
       id: '8', 
@@ -87,7 +94,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '24.10.2024' 
     },
     { 
       id: '9', 
@@ -98,7 +106,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '26.10.2024' 
     },
     { 
       id: '10', 
@@ -109,7 +118,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '28.10.2024' 
     },
     { 
       id: '11', 
@@ -120,7 +130,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '30.10.2024' 
     },
     { 
       id: '12', 
@@ -131,7 +142,8 @@ const currentProject = [
       scope: 'This project aims to develop a weather station to monitor meteorological conditions.',
       tasks: 'fisrt task. second task. third task',
       prerequisites: 'Basic knowledge. in meteorology. and electronics. is required.',
-      constraints: 'first constraint. second constriant' 
+      constraints: 'first constraint. second constriant',
+      date: '01.11.2024' 
     }
 
   ];
