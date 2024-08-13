@@ -1,5 +1,4 @@
 import React from 'react';
-import data_test from '@/public/data/data_test';
 
 
 const satelliteItemStyle = {
@@ -44,21 +43,13 @@ const strongStyle = {
 
 const SatelliteItem = ({ satellite }) => (
   <div style={satelliteItemStyle}>
-    <img src={'/projects/satellite.avif'} alt={satellite.id} style={imageStyle} />
+    <img src={'/projects/satellite.avif'} alt={satellite.name} style={imageStyle} />
     <div style={detailsStyle}>
-      <h3 style={nameStyle}>{satellite.id}</h3>
+      <h3 style={nameStyle}>{satellite.name}</h3>
       <p style={paragraphStyle}><strong style={strongStyle}>TLE1:</strong> {satellite.tle1}</p>
       <p style={paragraphStyle}><strong style={strongStyle}>TLE2:</strong> {satellite.tle2}</p>
     </div>
   </div>
 );
 
-const SatellitesList = () => (
-  <div>
-    {data_test.map((item) => (
-      <SatelliteItem key={item.id} satellite={item} />
-    ))}
-  </div>
-);
-
-export default SatellitesList;
+export default SatelliteItem;
