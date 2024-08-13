@@ -28,6 +28,18 @@ export default function studionew() {
       console.log(isTargetInView);
     }
   };
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [initialLoad, setInitialLoad] = useState(false);
+
+  useEffect(() => {
+    if (initialLoad) {
+      const timer = setTimeout(() => {
+        setIsLoaded(true);
+      }, 5000); // 5 seconds delay
+
+      return () => clearTimeout(timer); // Cleanup the timer on component unmount
+    }
+  }, [initialLoad]);
 
   useEffect(() => {
     window.addEventListener('scroll', checkIsInView);
