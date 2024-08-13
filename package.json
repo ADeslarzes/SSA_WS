@@ -14,6 +14,8 @@
     "@mui/material": "^5.16.6",
     "@nextui-org/button": "^2.0.37",
     "@nextui-org/system": "^2.2.5",
+    "@react-three/drei": "^9.109.5",
+    "@react-three/fiber": "^8.17.5",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.425",
     "@syncfusion/ej2-react-layouts": "^26.1.38",
@@ -33,6 +35,7 @@
     "satellite.js": "^5.0.0",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.4.5",
-    "three": "^0.166.1"
+    "three": "^0.166.1",
+    "three-stdlib": "^2.32.2"
   }
 }
