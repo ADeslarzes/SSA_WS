@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaSatellite, FaRocket, FaRegStar } from 'react-icons/fa';
+import previousProject from '@/src/previousProjects';
 
 const Timeline = () => {
   const [activeEvent, setActiveEvent] = useState(null);
@@ -15,14 +16,8 @@ const Timeline = () => {
     { id: 8, date: '2024-04-01', title: 'Data Transmission', description: 'First data received from space.', details: 'Details about the data transmission.' },
     { id: 9, date: '2024-01-01', title: 'Launch Event', description: 'Our first satellite launch.', details: 'Details about the satellite launch.' },
     { id: 10, date: '2024-02-01', title: 'Orbit Established', description: 'Satellite entered orbit.', details: 'Details about the orbit.' },
-    { id: 11, date: '2024-03-01', title: 'Mission Success', description: 'Mission accomplished successfully.', details: 'Details about the mission success.' },
-    { id: 12, date: '2024-04-01', title: 'Data Transmission', description: 'First data received from space.', details: 'Details about the data transmission.' },
-   /// { id: 13, date: '2024-01-01', title: 'Launch Event', description: 'Our first satellite launch.', details: 'Details about the satellite launch.' },
-    //{ id: 14, date: '2024-02-01', title: 'Orbit Established', description: 'Satellite entered orbit.', details: 'Details about the orbit.' },
-    //{ id: 15, date: '2024-03-01', title: 'Mission Success', description: 'Mission accomplished successfully.', details: 'Details about the mission success.' },
-    //{ id: 16, date: '2024-04-01', title: 'Data Transmission', description: 'First data received from space.', details: 'Details about the data transmission.' },
-    // Add more events as necessary
   ];
+
 
   const handleEventClick = (id) => {
     setActiveEvent(activeEvent === id ? null : id);
@@ -57,7 +52,7 @@ const Timeline = () => {
       <div 
         style={{
           display: 'flex',
-          gap: '100px',
+          gap: '150px',
           padding: '20px',
           whiteSpace: 'nowrap',
           overflowX: 'scroll',
@@ -79,7 +74,7 @@ const Timeline = () => {
               flexDirection: 'column',
               alignItems: 'center',
               background: activeEvent === item.id ? '#555' : '#CCCCCC',
-              borderRadius: '100%',
+              borderRadius:  '100%',
               padding: '15px',
               width: activeEvent === item.id ? '200px' : '70px',
               height: activeEvent === item.id ? '200px' : '70px',

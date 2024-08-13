@@ -4,10 +4,8 @@ import Loader from '@/components/Loader';
 import SolidLogo from '@/components/SolidLogo';
 import NavigationMenu from '@/components/NavigationMenu';
 import tleData from '/public/data/TLE_Light.json';
-import data_test from '@/public/data/data_test';
-import Data from '@/components/Data';
 import {Button} from "@nextui-org/button";
-import SatellitesList from '@/components/Data';
+import SatelliteItem from '@/components/Data';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,10 +15,10 @@ const getFilteredItems = (query, items) => {
 }
 
 export default function DataBase() {
-  const [datas, setDatas] = useState(data_test);
+  const [datas, setDatas] = useState(tleData);
   const [query, setQuery] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
-  const [filteredData, setFilteredData] = useState(data_test);
+  const [filteredData, setFilteredData] = useState(tleData);
 
  
 
@@ -34,8 +32,8 @@ export default function DataBase() {
   const filteredItems = getFilteredItems(query, transformedData);
 
   useEffect(() => {
-    setDatas(data_test);
-    setFilteredData(data_test);
+    setDatas(tleData);
+    setFilteredData(tleData);
     setIsLoaded(true);
   }, []);
 
@@ -63,29 +61,24 @@ export default function DataBase() {
           <img src="/others/button_download.svg" alt="Download" className="w-20 h-20" />
         </Button>
         <input 
-  type="text" 
-  placeholder="Search the name or the TLE..." 
-  onChange={e => setQuery(e.target.value)}
-  style={{
-    width: '250px',  // Smaller width
-    padding: '10px 15px',  // Add padding for a nicer look
-    borderRadius: '20px',  // Rounded corners for a fancier appearance
-    border: '2px solid #B22222',  // Red border for emphasis
-    outline: 'none',  // Remove the default outline
-    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',  // Subtle shadow for depth
-    margin: '20px auto',  // Center the search bar
-    display: 'block',  // Ensure it's centered in its container
-    fontSize: '16px',  // Slightly larger text for readability
-    color: '#333',  // Text color
-    backgroundColor: '#f9f9f9'  // Light background color
-  }}
-/>
+        type="text" 
+        placeholder="Search the name or the TLE..." 
+        onChange={e => setQuery(e.target.value)}
+        style={{
+          width: '250px', 
+          padding: '10px 15px', 
+          borderRadius: '20px', 
+          border: '2px solid #B22222',  
+          outline: 'none', 
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)', 
+          margin: '20px auto', 
+          display: 'block',  
+          fontSize: '16px', 
+          color: '#333',  
+          backgroundColor: '#f9f9f9' 
+          }}/>
         <div className='overflow-y-auto p-10'>
-        {/*<div className="text-[red] text-2xl flex items-center justify-center text-center flex-col overflow-y-auto max-w-[1000px] max-h-[1000px] bg-black">*/}
-        <div className='bg-black'>
-          <h1>Satellites Information</h1>
-          <SatellitesList data={filteredItems}/>
-        </div>
+          {filteredItems.map( (item) => <SatelliteItem key={item.name} satellite={item}/>)}
         </div>
         
       </div>
