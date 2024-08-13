@@ -1,42 +1,64 @@
-import React, { useEffect, useState } from 'react';
-import tleData from '/public/data/TLE_Light.json';
-// Function to format TLE data (array) into a table
-function formatTLEData() {
-  const transformedData = Object.keys(tleData).map(key => ({
-    name: key,
-    tle1: tleData[key].tle[0],
-    tle2: tleData[key].tle[1],
-    color: tleData[key].color,
-  }));
-  // Generate table rows from the TLE data
-  const rows = Object.keys(tleData).map(key => (
-    <tr>
-      <td className="border px-4 py-2">{key}</td>
-      <td className="border px-4 py-2 whitespace-pre-wrap">{tleData[key].tle[0]}<br/>{tleData[key].tle[1]}</td>
-    </tr>
-  ));
+import React from 'react';
+import data_test from '@/public/data/data_test';
 
-  // Return the complete table
-  return (
-    <table className="table-auto w-full text-white text-left text-sm">
-      <thead>
-        <tr>
-          <th className="px-4 py-2">Name</th>
-          <th className="px-4 py-2">TLE</th>
-        </tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </table>
-  );
-}
 
-// Data component to display the formatted TLE data
-export default function Data({ tleData, onLoad }) {
-  useEffect(() => {
-    if (onLoad) {
-      onLoad();
-    }
-  }, [onLoad]);
+const satelliteItemStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  border: '2px solid #ddd',
+  borderRadius: '10px',
+  overflow: 'hidden',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+  backgroundColor: '#fff',
+  marginBottom: '20px',
+  maxWidth: '800px',
+  margin: '0 auto'
+};
 
-  return <div>{formatTLEData(tleData)}</div>;
-}
+const imageStyle = {
+  width: '150px',
+  height: '150px',
+  objectFit: 'cover'
+};
+
+const detailsStyle = {
+  padding: '20px',
+  flex: '1'
+};
+
+const nameStyle = {
+  margin: '0 0 10px',
+  fontSize: '1.5rem',
+  color: '#333'
+};
+
+const paragraphStyle = {
+  margin: '5px 0',
+  fontSize: '1rem',
+  color: '#666'
+};
+
+const strongStyle = {
+  color: '#333'
+};
+
+const SatelliteItem = ({ satellite }) => (
+  <div style={satelliteItemStyle}>
+    <img src={'/projects/satellite.avif'} alt={satellite.id} style={imageStyle} />
+    <div style={detailsStyle}>
+      <h3 style={nameStyle}>{satellite.id}</h3>
+      <p style={paragraphStyle}><strong style={strongStyle}>TLE1:</strong> {satellite.tle1}</p>
+      <p style={paragraphStyle}><strong style={strongStyle}>TLE2:</strong> {satellite.tle2}</p>
+    </div>
+  </div>
+);
+
+const SatellitesList = () => (
+  <div>
+    {data_test.map((item) => (
+      <SatelliteItem key={item.id} satellite={item} />
+    ))}
+  </div>
+);
+
+export default SatellitesList;
