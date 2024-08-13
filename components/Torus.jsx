@@ -27,17 +27,17 @@ export default function Torus() {
     const pointLight = new THREE.PointLight(0xffffff, 100);
     pointLight.position.set(5, 5, 5);
     scene.add(pointLight);
-    // const ambientLight = new THREE.AmbientLight(0xffffff);
-    // scene.add(ambientLight);
+    const ambientLight = new THREE.AmbientLight(0xffffff);
+    scene.add(ambientLight);
     
     const controls = new OrbitControls(camera, renderer.domElement);
     
     function animate() {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
-      torus.rotation.x += 0.003;
-      torus.rotation.y += 0.0007;
-      torus.rotation.z += 0.003;
+      torus.rotation.x += 0.0032;
+      torus.rotation.y += 0.0005;
+      torus.rotation.z += 0.002;
     
       controls.update();
     
@@ -45,6 +45,20 @@ export default function Torus() {
     }
     
     animate();
+
+    // Handle window resize
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+    window.addEventListener('resize', onWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', onWindowResize);
+      controls.dispose(); // Clean up controls to avoid memory leaks
+    };
+    
   }, [])
 
   return (
