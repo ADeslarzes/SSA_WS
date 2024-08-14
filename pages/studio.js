@@ -13,6 +13,7 @@ import currentProjects from '@/src/currentProjects';
 import sideProjects from '@/src/sideProjects';
 import previousProjects from '@/src/previousProjects';
 import Timeline from '@/components/TimeLineSlider';
+import LinkTree from '@/components/LinkTree';
 
 export default function studionew() {
   const scrollRef = useRef(null);
@@ -219,7 +220,7 @@ export default function studionew() {
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] md:sticky top-12 font-Lato">
               FIND US
             </div>
-            
+            <LinkTree />
           </div>
         </motion.div>
       </div>
