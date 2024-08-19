@@ -62,7 +62,7 @@ export default function DataBase() {
         </Button>
         <input 
         type="text" 
-        placeholder="Search the name or the TLE..." 
+        placeholder="Search the name..." 
         onChange={e => setQuery(e.target.value)}
         style={{
           width: '250px', 
