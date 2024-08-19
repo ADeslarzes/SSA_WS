@@ -12,7 +12,7 @@ const Model = ({ path }) => {
   // Rotate the model continuously
   useFrame(() => {
     if (ref.current) {
-      ref.current.rotation.y += 0.01; // Adjust the speed of rotation here
+      ref.current.rotation.y -= 0.01; // Adjust the speed of rotation here
     }
   });
 
