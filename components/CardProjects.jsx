@@ -103,7 +103,7 @@ const Projects = ({ items, selectedId, setSelectedId }) => {
                     </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    //</div>
   );
 };
 

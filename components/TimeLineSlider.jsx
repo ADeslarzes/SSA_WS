@@ -6,22 +6,30 @@ const Timeline = () => {
   const [activeEvent, setActiveEvent] = useState(null);
 
   const timelineData = [
-    { id: 1, date: '2024-01-01', title: 'Launch Event', description: 'Our first satellite launch.', details: 'Details about the satellite launch.' },
-    { id: 2, date: '2024-02-01', title: 'Orbit Established', description: 'Satellite entered orbit.', details: 'Details about the orbit.' },
-    { id: 3, date: '2024-03-01', title: 'Mission Success', description: 'Mission accomplished successfully.', details: 'Details about the mission success.' },
-    { id: 4, date: '2024-04-01', title: 'Data Transmission', description: 'First data received from space.', details: 'Details about the data transmission.' },
-    { id: 5, date: '2024-01-01', title: 'Launch Event', description: 'Our first satellite launch.', details: 'Details about the satellite launch.' },
-    { id: 6, date: '2024-02-01', title: 'Orbit Established', description: 'Satellite entered orbit.', details: 'Details about the orbit.' },
-    { id: 7, date: '2024-03-01', title: 'Mission Success', description: 'Mission accomplished successfully.', details: 'Details about the mission success.' },
-    { id: 8, date: '2024-04-01', title: 'Data Transmission', description: 'First data received from space.', details: 'Details about the data transmission.' },
-    { id: 9, date: '2024-01-01', title: 'Launch Event', description: 'Our first satellite launch.', details: 'Details about the satellite launch.' },
-    { id: 10, date: '2024-02-01', title: 'Orbit Established', description: 'Satellite entered orbit.', details: 'Details about the orbit.' },
+    { id: 1,  title: 'Event', description: 'Our first satellite launch.' , image: '/projects/satellite.avif'},
+    { id: 2, title: 'Main project', description:'In this project....',  image: '/projects/cupola.png'},
+    { id: 3, title: 'Side project', description:'In this project....',  image: '/projects/Station_Meteo.png'},
+    { id: 4, title: 'Side project', description:'In this project....',  image: '/projects/satellite.avif'},
+    { id: 5,  title: 'Event', description: 'Satellite entered orbit.', image: '/projects/satellite.avif'},
+    { id: 6, title: 'Main project', description:'In this project....',  image: '/projects/satellite.avif'},
+    { id: 7,  title: 'Event', description: 'Mission accomplished successfully.' , image: '/projects/satellite.avif'},
+    { id: 8, title: 'Side project', description:'In this project....',  image: '/projects/satellite.avif'},
+    { id: 9, title: 'Main project', description:'In this project....',  image: '/projects/satellite.avif'},
+    { id: 10,  title: 'Event', description: 'First data received from space.' , image: '/projects/satellite.avif'},
+    { id: 11, title: 'Main project', description:'In this project....',  image: '/projects/satellite.avif'},
+    { id: 12, title: 'Side project', description:'In this project....',  image: '/projects/satellite.avif'},
   ];
-
 
   const handleEventClick = (id) => {
     setActiveEvent(activeEvent === id ? null : id);
   };
+
+  const imageStyle = {borderRadius: '100%', 
+                      position: 'relative',
+                      padding: '2px',
+                      width: '100px', 
+                      height: '100px',
+                      objectFit: 'cover'}
 
   return (
     <div 
@@ -31,7 +39,7 @@ const Timeline = () => {
         alignItems: 'center',
         overflow: 'hidden',
         width: '100%',
-        height: '30vh',
+        height: activeEvent === null ? '20vh' : '50vh',
         padding: '20px',
         background: 'black',
         color: 'white',
@@ -52,7 +60,7 @@ const Timeline = () => {
       <div 
         style={{
           display: 'flex',
-          gap: '150px',
+          gap: '70px',
           padding: '20px',
           whiteSpace: 'nowrap',
           overflowX: 'scroll',
@@ -73,12 +81,12 @@ const Timeline = () => {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              background: activeEvent === item.id ? '#555' : '#CCCCCC',
-              borderRadius:  '100%',
-              padding: '15px',
-              width: activeEvent === item.id ? '200px' : '70px',
-              height: activeEvent === item.id ? '200px' : '70px',
-              top : activeEvent === item.id ? '-12%' : '20%',
+              background: activeEvent === item.id ? `url(${item.image}) no-repeat center/cover` : item.title === 'Event' ? '#CCCCCC' : item.title === 'Main project' ? 'red' : 'gray',
+              borderRadius: '100%',
+              padding: activeEvent ===item.id ? '70px': item.title === 'Event'? '15px' : item.title === 'Main project' ? '15px' : '10px',
+              width: activeEvent === item.id ? '250px' : item.title ==='Event' ?' 70px' : item.title === 'Main project' ? '5px' : '1px',
+              height: activeEvent === item.id ? '250px' : item.title ==='Event' ?' 70px' : item.title === 'Main project' ? '5px' : '1px',
+              top : activeEvent === item.id ? '5%' : activeEvent === null ? (item.title ==='Event' ?' 9%' : item.title === 'Main project' ? '27%' : '32%') : (item.title ==='Event' ?'32%' : item.title === 'Main project' ? '39%' : '40%'),
               cursor: 'pointer',
               transition: 'all 0.3s ease',
               position: 'relative',
@@ -86,16 +94,15 @@ const Timeline = () => {
             }}
             onClick={() => handleEventClick(item.id)}
           >
-            <div style={{ fontSize: '40px', color: '#B22222' }}>
-              {item.id === 1 ? <FaRocket /> : item.id === 2 ? <FaSatellite /> : <FaSatellite />}
+            <div style={{ fontSize: '40px', color: '#B22222', }}>
+              {activeEvent != item.id &&  (item.title === 'Event' && <FaSatellite />)}
             </div>
             <div style={{ textAlign: 'center', marginTop: '10px' }}>
-              <h2 style={{ fontSize: '16px' }}>{item.title}</h2>
-              <p style={{ fontSize: '12px', color: '#ccc' }}>{item.date}</p>
+              {/*<h2 style={{ fontSize: '16px' }}>{item.title}</h2>
+              <p style={{ fontSize: '12px', color: '#ccc' }}>{item.date}</p>*/}
               {activeEvent === item.id && (
                 <div style={{ marginTop: '15px', fontSize: '14px' }}>
                   <p>{item.description}</p>
-                  <p>{item.details}</p>
                 </div>
               )}
             </div>
