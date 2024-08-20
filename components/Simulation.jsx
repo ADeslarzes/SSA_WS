@@ -35,27 +35,27 @@ const Simulation = ({ onLoad }) => {
     const loader = new THREE.TextureLoader();
     const geometry = new THREE.IcosahedronGeometry(2, detail);
     const material = new THREE.MeshPhongMaterial({
-      map: loader.load('/earth/00_earthmap1k.jpg'),
-      specularMap: loader.load('/earth/02_earthspec1k.jpg'),
-      bumpMap: loader.load('/earth/01_earthbump1k.jpg'),
+      map: loader.load('/earth/Albedo.jpg'),
+      specularMap: loader.load('/earth/Ocean.png'),
+      bumpMap: loader.load('/earth/Bump.jpg'),
       bumpScale: 4,
     });
     const earthMesh = new THREE.Mesh(geometry, material);
     earthGroup.add(earthMesh);
 
     const lightsMat = new THREE.MeshBasicMaterial({
-      map: loader.load('/earth/03_earthlights1k.jpg'),
+      map: loader.load('/earth/night_lights_modified.png'),
       blending: THREE.AdditiveBlending,
     });
     const lightsMesh = new THREE.Mesh(geometry, lightsMat);
     earthGroup.add(lightsMesh);
 
     const cloudsMat = new THREE.MeshStandardMaterial({
-      map: loader.load('/earth/04_earthcloudmap.jpg'),
+      map: loader.load('/earth/Clouds.png'),
       transparent: true,
       opacity: 0.8,
       blending: THREE.AdditiveBlending,
-      alphaMap: loader.load('/earth/05_earthcloudmaptrans.jpg'),
+      //alphaMap: loader.load('/earth/05_earthcloudmaptrans.jpg'),
     });
     const cloudsMesh = new THREE.Mesh(geometry, cloudsMat);
     cloudsMesh.scale.setScalar(1.003);
@@ -171,7 +171,7 @@ const Simulation = ({ onLoad }) => {
       requestAnimationFrame(animate);
       earthMesh.rotation.y += earthRotationSpeed;
       lightsMesh.rotation.y += earthRotationSpeed;
-      cloudsMesh.rotation.y += earthRotationSpeed * 2;
+      cloudsMesh.rotation.y += earthRotationSpeed * 1.3;
       glowMesh.rotation.y += earthRotationSpeed;
       //stars.rotation.y -= 0;
 

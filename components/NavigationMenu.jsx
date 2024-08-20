@@ -34,7 +34,7 @@ export default function NavigationMenu() {
       id: 1,
       title: 'SSA',
       url: '/studio',
-      iconUrl: '/ssa_logo/SSA_LOGO_FULL.png',
+      iconUrl: '/ssa_logo/LOGO_SSA.jpeg',
       description: 'Learn more about us',
       navdescription: 'Learn more about us',
     },
