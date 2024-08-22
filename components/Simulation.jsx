@@ -52,7 +52,7 @@ const Simulation = ({ onLoad }) => {
     // Load Earth textures with fallback
     const loadEarthTextures = async () => {
       const albedo = await loadTextureWithFallback('/earth/Albedo.jpg', '/earth/00_earthmap1k.jpg');
-      const specular = await loadTextureWithFallback('/earth/Ocean.png', '/earth/Ocean.png');
+      const specular = await loadTextureWithFallback('/earth/Ocean.png', '/earth/00_earthmap1k.jpg');
       const bump = await loadTextureWithFallback('/earth/Bump.jpg', '/earth/01_earthbump1k.jpg');
       const lights = await loadTextureWithFallback('/earth/night_lights_modified.png', '/earth/03_earthlights1k.jpg');
       const clouds = await loadTextureWithFallback('/earth/Clouds.png', '/earth/04_earthcloudmap.jpg');
