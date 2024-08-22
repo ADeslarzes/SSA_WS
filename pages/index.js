@@ -46,6 +46,13 @@ export default function Home() {
       <div className="w-full px-9 absolute top-9 md:top-16 right-9 z-20">
         <NavigationMenu />
       </div>
+
+      {/* Bottom Right Text */}
+      <div className="absolute bottom-9 right-9 md:bottom-16 md:right-16 z-20 bg-transparent text-white p-4 hidden md:block overflow-hidden" style={{ width: '30%', height: '20%' }}>
+        <p className="text-l leading-tight">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nulla facilisi. Ut fringilla mi a libero euismod, nec congue metus vestibulum. Curabitur ac leo nunc. Vestibulum et mauris vel ante finibus maximus nec ut leo. Integer consectetur neque ut v
+        </p>
+      </div>
     </div>
   );
 }
