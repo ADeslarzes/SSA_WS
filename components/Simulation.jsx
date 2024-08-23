@@ -36,14 +36,14 @@ const Simulation = ({ onLoad }) => {
 
     // Function to load textures with fallback
     const loadTextureWithFallback = (primaryUrl, fallbackUrl) => {
-      return new Promise((resolve) => {
+      return new Promise((resolve, reject) => {
         loader.load(
           primaryUrl,
-          (texture) => resolve(texture),
+          (texture) => resolve({ texture, success: true }),
           undefined,
           () => {
             // On error, load the fallback texture
-            loader.load(fallbackUrl, (fallbackTexture) => resolve(fallbackTexture));
+            loader.load(fallbackUrl, (fallbackTexture) => resolve({ texture: fallbackTexture, success: false }));
           }
         );
       });
@@ -51,13 +51,31 @@ const Simulation = ({ onLoad }) => {
 
     // Load Earth textures with fallback
     const loadEarthTextures = async () => {
-      const albedo = await loadTextureWithFallback('/earth/Albedo.jpg', '/earth/00_earthmap1k.jpg');
-      const specular = await loadTextureWithFallback('/earth/Ocean.png', '/earth/00_earthmap1k.jpg');
-      const bump = await loadTextureWithFallback('/earth/Bump.jpg', '/earth/01_earthbump1k.jpg');
-      const lights = await loadTextureWithFallback('/earth/night_lights_modified.png', '/earth/03_earthlights1k.jpg');
-      const clouds = await loadTextureWithFallback('/earth/Clouds.png', '/earth/04_earthcloudmap.jpg');
+      const albedoResult = await loadTextureWithFallback('/earth/Albedo.jpg', '/earth/00_earthmap1k.jpg');
+      const specularResult = await loadTextureWithFallback('/earth/Ocean.png', '/earth/00_earthmap1k.jpg');
+      const bumpResult = await loadTextureWithFallback('/earth/Bump.jpg', '/earth/01_earthbump1k.jpg');
+      const lightsResult = await loadTextureWithFallback('/earth/night_lights_modified.png', '/earth/03_earthlights1k.jpg');
+      const cloudsResult = await loadTextureWithFallback('/earth/Clouds.png', '/earth/04_earthcloudmap.jpg');
 
-      return { albedo, specular, bump, lights, clouds };
+      const anyFailure = !albedoResult.success || !specularResult.success || !bumpResult.success || !lightsResult.success || !cloudsResult.success;
+
+      if (anyFailure) {
+        return {
+          albedo: albedoResult.texture,
+          specular: specularResult.texture,
+          bump: bumpResult.texture,
+          lights: lightsResult.texture,
+          clouds: cloudsResult.texture,
+        };
+      }
+
+      return {
+        albedo: albedoResult.texture,
+        specular: specularResult.texture,
+        bump: bumpResult.texture,
+        lights: lightsResult.texture,
+        clouds: cloudsResult.texture,
+      };
     };
 
     loadEarthTextures().then(({ albedo, specular, bump, lights, clouds }) => {
