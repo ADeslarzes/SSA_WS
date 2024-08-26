@@ -3,7 +3,7 @@ import React from 'react';
 export default function SolidLogo() {
   const logoStyle = {
     position: 'absolute',
-    top: '0',
+    top: '6',
     left: '0',
     padding: '10px', // Optional: add some padding
     maxWidth: '200px' // Adjust size as needed
