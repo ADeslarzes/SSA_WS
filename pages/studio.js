@@ -170,37 +170,37 @@ export default function studionew() {
                 </div>
                 <div className="flex  gap-5 flex-col lg:flex-row">
                   {/* Josué */}
-                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-white">
+                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-black">
                     <div className="w-full h-[250px] bg-josue bg-cover md:block hidden rounded-lg mb-2"></div>
                     <div className="flex gap-x-2 mb-2">
                       <div className="bg-[#B00000] text-md text-black px-2 py-0.5 rounded-md">
                         Lead
                       </div>
                     </div>
-                    <p className="text-black font-semibold">
+                    <p className="text-white font-semibold">
                       Josué Aubert{' '}
                     </p>
-                    <a className="text-black/40 text-[#B00000]" href="mailto:josue.aubert@epfl.ch">josue.aubert@epfl.ch</a>
-                    <p className="text-black/40">
+                    <a className="text-white/40 text-[#B00000]" href="mailto:josue.aubert@epfl.ch">josue.aubert@epfl.ch</a>
+                    <p className="text-white/40">
                       PH BA3
                     </p>
-                    <p className='text-black/40'>
+                    <p className='text-white/40'>
                       Super beau gosse
                     </p>
                   </div>
                   {/* Aymeric */}
-                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-white">
+                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-black">
                     <div className="w-full h-[250px] bg-aymeric bg-cover md:block hidden rounded-lg mb-2"></div>
                     <div className="flex gap-x-2 mb-2">
                       <div className="bg-[#B00000] text-md text-black px-2 py-0.5 rounded-md">
                         Lead
                       </div>
                     </div>
-                    <p className="text-black font-semibold">
+                    <p className="text-white font-semibold">
                       Aymeric Deslarzes{' '}
                     </p>
-                    <a className="text-black/40 text-[#B00000]" href="mailto:aymeric.deslarzes@epfl.ch">aymeric.deslarzes@epfl.ch</a>
-                    <p className="text-black/40">
+                    <a className="text-white/40 text-[#B00000]" href="mailto:aymeric.deslarzes@epfl.ch">aymeric.deslarzes@epfl.ch</a>
+                    <p className="text-white/40">
                       PH BA3
                     </p>
                   </div>
