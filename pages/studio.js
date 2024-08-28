@@ -23,6 +23,13 @@ export default function studionew() {
   const controls = useAnimation();
   const [isTargetInView, setIsTargetInView] = useState(true);
 
+  const sideProjects = [
+    { id: 1, title: 'Project One', description: 'Description of Project One' },
+    { id: 2, title: 'Project Two', description: 'Description of Project Two' },
+    { id: 3, title: 'Project Three', description: 'Description of Project Three' },
+    // Add more projects as needed
+  ];
+
   const checkIsInView = () => {
     const target = document.getElementById('target');
     if (target) {
@@ -138,21 +145,11 @@ export default function studionew() {
             </div>
           </div>
         {/* Main projects */}
-          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[60px]">
-            <div className="text-[#B22222] text-3xl md:text-5xl w-[600px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
-              Main Projects
-              <div className="text-white top-12 mb-12 mt-12 text-2xl" style={{ maxWidth: '150%'}}>
-                  Here are some of the projects we are currently working on:We are currently working on a number of projects that aim to render this world a better place. We are currently working on a number of projects that aim to render this world a better place. Here are some of the projects we are currently working on:We are currently working on a number of projects that aim to render this world a better place. We are currently working on a number of projects that aim to render this world a better place.  
-                </div >
-            </div>
-            <div className="flex-grow">
-              <div className="flex flex-col max-w-[1500px]">
-                {/* A carousel on which we can select cards and expend them, here is an example https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/v6/misc/carousel/react?file=/src/App.js */}
-                  {/*<CardProjects items={currentProjects} selectedId={mainSelectedId} setSelectedId={setMainSelectedId}/>*/}
-                  <TestCardProjects items={currentProjects} selectedId={mainSelectedId} setSelectedId={setMainSelectedId}/>
-              </div>
-            </div>
-          </div>
+          <CardProjects
+            items={sideProjects}
+            selectedId={sideSelectedId}
+            setSelectedId={setSideSelectedId}
+          />
         {/* Side projects */}
           <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
@@ -164,7 +161,7 @@ export default function studionew() {
                   We are currently working on a number of side projects that aim to render this world a better place. Here are some of the projects we are currently working on:
                 </div>
                 {/* A carousel on which we can select cards and expend them, here is an example https://codesandbox.io/s/github/rcbyr/keen-slider-sandboxes/tree/v6/misc/carousel/react?file=/src/App.js */}
-                   <CardProjects items={sideProjects} selectedId={sideSelectedId} setSelectedId={setSideSelectedId} /> 
+                   {/* <CardProjects items={sideProjects} selectedId={sideSelectedId} setSelectedId={setSideSelectedId} />  */}
               </div>
             </div>
           </div>
