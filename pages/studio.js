@@ -17,6 +17,7 @@ import Timeline from '@/components/TimeLineSlider';
 import LinkTree from '@/components/LinkTree';
 import ImageSlider from '@/components/pictures';
 import TestCardProjects from '@/components/cardprojects_test';
+import SatelliteModels from '@/components/3D_satelliteModels';
 
 export default function studionew() {
   const scrollRef = useRef(null);
@@ -85,7 +86,7 @@ export default function studionew() {
         {/* <div className="w-full z-20  p-9 md:p-16 absolute top-0 h-max flex justify-between items-center font-semibold"></div> */}
         {/* Image du studio */}
         <div>
-          <Torus />
+          <SatelliteModels />
         </div>
       </div>
 
