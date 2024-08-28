@@ -15,13 +15,13 @@ const sideProjects = [
                   completely on its own energy and in a remote location where quick human help isn’t an option. By \
                   the end of the semester, the design should be done, and then the actual building of the cupola will \
                   start. If the students want, they can also participate to the construction',
-    tasks: 'Taking note of the report done for the prototype and finding solutions for any improvements that need to be made. \
-            Designing the new cupola considering the report and the different constraints. \
-            Building the new cupola (if desired).',
-    prerequisites: 'Skills in building facilities\
-                    Familiarity with a 3D design program',
-    constraints: 'Self-sufficient dome.\
-                  Remote location.'
+    tasks: ['Taking note of the report done for the prototype and finding solutions for any improvements that need to be made',
+            'Designing the new cupola considering the report and the different constraints',
+            'Building the new cupola (if desired)'],
+    prerequisites: ['Skills in building facilities',
+                    'Familiarity with a 3D design program'],
+    constraints: ['Self-sufficient dome',
+                  'Remote location']
   },
   { 
     id: 's2', 
@@ -36,16 +36,16 @@ const sideProjects = [
                   This requires getting a good understanding of weather forecasting and proficient management of data from \
                   different weather stations. Thorough execution of this project is essential to prevent damage to the expensive \
                   tools and ensure the reliability and safety of observations.',
-    tasks: 'Gathering and storing data from the local weather station \
-            Develop a system to assess the current cloud cover using a sky-facing camera and/or the Météo Suisse data. \
-            Creation of a method that allow or not observations. It would take as input the Météo Suisse data, camera informations, the local weather station data, ... \
-            Build an interface between the local weather station and the telescope control software.',
-    prerequisites: 'A good understanding of weather forecasting. \
-                    Skills in data management and analysis.\
-                    Proficiency in handling and interpreting weather station data.',
-    constraints: 'Self-sufficient dome. \
-                  Remote location. \
-                  High accuracy required.'
+    tasks: ['Gathering and storing data from the local weather station',
+            'Develop a system to assess the current cloud cover using a sky-facing camera and/or the Météo Suisse data',
+            'Creation of a method that allow or not observations. It would take as input the Météo Suisse data, camera informations, the local weather station data, ... ',
+            'Build an interface between the local weather station and the telescope control software.'],
+    prerequisites: ['A good understanding of weather forecasting',
+                    'Skills in data management and analysis',
+                    'Proficiency in handling and interpreting weather station data.'],
+    constraints: ['Self-sufficient dome',
+                  'Remote location',
+                  'High accuracy required']
   },
   { 
     id: 's3', 
@@ -61,13 +61,13 @@ const sideProjects = [
                   completely on its own energy and in a remote location where quick human help isn’t an option. By \
                   the end of the semester, the design should be done, and then the actual building of the cupola will \
                   start. If the students want, they can also participate to the construction',
-    tasks: 'Taking note of the report done for the prototype and finding solutions for any improvements that need to be made.\
-            Designing the new cupola considering the report and the different constraints.\
-            Building the new cupola (if desired).',
-    prerequisites: 'Skills in building facilities\
-                    Familiarity with a 3D design program',
-    constraints: 'Self-sufficient dome.\
-                  Remote location.'
+    tasks: ['Taking note of the report done for the prototype and finding solutions for any improvements that need to be made',
+            'Designing the new cupola considering the report and the different constraints',
+            'Building the new cupola (if desired).'],
+    prerequisites: ['Skills in building facilities',
+                    'Familiarity with a 3D design program'],
+    constraints: ['Self-sufficient dome',
+                  'Remote location']
   },
   { 
     id: 's4', 
@@ -83,13 +83,13 @@ const sideProjects = [
                   completely on its own energy and in a remote location where quick human help isn’t an option. By \
                   the end of the semester, the design should be done, and then the actual building of the cupola will \
                   start. If the students want, they can also participate to the construction',
-    tasks: 'Taking note of the report done for the prototype and finding solutions for any improvements that need to be made.\
-            Designing the new cupola considering the report and the different constraints.\
-            Building the new cupola (if desired).',
-    prerequisites: 'Skills in building facilities\
-                    Familiarity with a 3D design program',
-    constraints: 'Self-sufficient dome.\
-                  Remote location.'
+    tasks: ['Taking note of the report done for the prototype and finding solutions for any improvements that need to be made',
+            'Designing the new cupola considering the report and the different constraints',
+            'Building the new cupola (if desired).'],
+    prerequisites: ['Skills in building facilities',
+                    'Familiarity with a 3D design program'],
+    constraints: ['Self-sufficient dome',
+                  'Remote location.']
   },
 ];
 
