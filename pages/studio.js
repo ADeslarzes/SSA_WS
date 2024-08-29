@@ -99,7 +99,7 @@ export default function studionew() {
           id="toBeScaled"
           initial={{ scale: 1 }}
           animate={controls}
-          className="w-screen min-h-screen absolute overflow-hidden -mt-16 rounded-2xl bg-black shadow-inner items-center md:max-h-max"
+          className="w-screen min-h-screen absolute overflow-hidden -mt-16 rounded-2xl bg-black border-t border-gray-400 shadow-inner items-center md:max-h-max"
         >
         {/*Pictures*/}
           {/* <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
