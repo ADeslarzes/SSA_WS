@@ -9,7 +9,7 @@ const CardProjects = ({ items, selectedId, setSelectedId }) => {
       <div className="flex-grow break-all">
         <div className="flex flex-col break-all">
           <div className="text-white break-all mb-12 text-xl" style={{ width: '90%' }}>
-            We are currently working on a number of side projects that aim to render this world a better place. Here are some of the projects we are currently working on:
+            We are currently working on a number of projects that aim to render this world a better place. Here are some of the projects we are currently working on:
           </div>
           {/* Toggle bar */}
           <div className="flex flex-col gap-4">
@@ -32,62 +32,59 @@ const CardProjects = ({ items, selectedId, setSelectedId }) => {
 
                 {selectedId === item.id && (
                   <div className="text-white mt-4 p-4 border-l border-gray-600 rounded-lg shadow-md">
-                  <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
-                    <div>
-                      <dt className="font-semibold text-lg">Recommendation:</dt>
-                      <dd className="text-base">{item.recommendation}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-lg">Date:</dt>
-                      <dd className="text-base">{item.date}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-lg">Owner:</dt>
-                      <dd className="text-base">{item.owner}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-lg">Lab:</dt>
-                      <dd className="text-base">{item.lab}</dd>
-                    </div>
-                    <div className="col-span-2">
-                      <dt className="font-semibold text-lg">Description:</dt>
-                      <dd className="text-base mt-1">{item.description}</dd>
-                    </div>
-                    <div className="col-span-2">
-                      <dt className="font-semibold text-lg">Tasks:</dt>
-                      <dd className="text-base mt-1">
-                        <ol className="list-decimal list-inside">
-                          {item.tasks.map((task, index) => (
-                            <li key={index}>{task}</li>
-                          ))}
-                        </ol>
-                      </dd>
-                    </div>
-                    <div className="col-span-2">
-                      <dt className="font-semibold text-lg">Prerequisites:</dt>
-                      <dd className="text-base mt-1">
-                        <ol className="list-decimal list-inside">
-                          {item.prerequisites.map((task, index) => (
-                            <li key={index}>{task}</li>
-                          ))}
-                        </ol>
-                      </dd>
-                    </div>
-                    <div className="col-span-2">
-                      <dt className="font-semibold text-lg">Constraints:</dt>
-                      <dd className="text-base mt-1">
-                        <ol className="list-decimal list-inside">
-                          {item.constraints.map((task, index) => (
-                            <li key={index}>{task}</li>
-                          ))}
-                        </ol>
-                      </dd>
-                    </div>
-                  </dl>
-                  {/* Add more detailed content here if needed */}
-                </div>
-                
-                
+                    <dl className="grid grid-cols-1 gap-y-2">
+                      <div>
+                        <dt className="font-semibold text-lg">Recommendation:</dt>
+                        <dd className="text-base">{item.recommendation}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-lg">Date:</dt>
+                        <dd className="text-base">{item.date}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-lg">Owner:</dt>
+                        <dd className="text-base">{item.owner}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-lg">Lab:</dt>
+                        <dd className="text-base">{item.lab}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-lg">Description:</dt>
+                        <dd className="text-base mt-1">{item.description}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-lg">Tasks:</dt>
+                        <dd className="text-base mt-1">
+                          <ol className="list-decimal list-inside">
+                            {item.tasks.map((task, index) => (
+                              <li key={index}>{task}</li>
+                            ))}
+                          </ol>
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-lg">Prerequisites:</dt>
+                        <dd className="text-base mt-1">
+                          <ol className="list-decimal list-inside">
+                            {item.prerequisites.map((task, index) => (
+                              <li key={index}>{task}</li>
+                            ))}
+                          </ol>
+                        </dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-lg">Constraints:</dt>
+                        <dd className="text-base mt-1">
+                          <ol className="list-decimal list-inside">
+                            {item.constraints.map((task, index) => (
+                              <li key={index}>{task}</li>
+                            ))}
+                          </ol>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
                 )}
               </div>
             ))}
