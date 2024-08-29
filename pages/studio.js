@@ -102,8 +102,8 @@ export default function studionew() {
           className="w-screen min-h-screen absolute overflow-hidden -mt-16 rounded-2xl bg-black border-t border-gray-400 shadow-inner items-center md:max-h-max"
         >
         {/*Pictures*/}
-          {/* <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
-            <div className="text-[#B22222] text-3xl md:text-5xl w-[150px] mb-8 md:mb-0 h-full md:sticky top-12 font-Lato">
+          {/* <div className="mt-12 flex flex-col lg:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
+            <div className="text-[#B22222] text-3xl md:text-5xl w-[150px] mb-8 lg:mb-10 h-full md:sticky top-12 font-Lato">
               Pictures
             </div>
             <div className="flex-grow">
@@ -113,8 +113,8 @@ export default function studionew() {
             </div>
           </div> */}
         {/* Description of the association */}
-          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
-            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0  h-full md:sticky top-12 font-Lato">
+          <div className="mt-12 flex flex-col lg:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
+            <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 lg:mb-10  h-full md:sticky top-12 font-Lato">
               SSA
             </div>
             <div className="flex-grow">
@@ -128,8 +128,8 @@ export default function studionew() {
             </div>
           </div>
         {/* TimeLIne */}
-          <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
-            <div className="text-[#B22222] text-3xl md:text-5xl w-[150px] mb-8 md:mb-0 h-full md:sticky top-12 font-Lato">
+          <div className="mt-12 flex flex-col lg:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
+            <div className="text-[#B22222] text-3xl md:text-5xl w-[150px] mb-8 lg:mb-10 h-full md:sticky top-12 font-Lato">
               Timeline
             </div>
             <div className="flex-grow">
@@ -152,13 +152,13 @@ export default function studionew() {
             setSelectedId={setSideSelectedId}
           />
         {/* Description of the team */}
-          <div className="pt-14 md:pt-28 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px]  justify-between gap-x-[120px] mx-auto">
-            <div className="text-[#B22222] mb-8 md:mb-0 text-3xl md:text-5xl w-[300px] h-full md:sticky top-12 font-Lato">
+          <div className="pt-14 md:pt-28 flex flex-col lg:flex-row w-full p-8 md:px-28 lg:max-w-[2000px]  justify-between gap-x-[120px] mx-auto">
+            <div className="text-[#B22222] mb-8 lg:mb-10 text-3xl md:text-5xl w-[300px] h-full md:sticky top-12 font-Lato">
               TEAM LEAD 
             </div>
             <div className="flex-grow">
               <div className="flex flex-col  max-w-[1500px]">
-                <div className="text-white mb-12 md:w-3/4 text-xl">
+                <div className="text-white mb-12 text-xl" style={{ Width: '90%' }}>
                   Our team consists of members with diverse backgrounds,
                   including designers, technologists, and researchers. This
                   unique blend of expertise empowers us to create innovative
@@ -169,7 +169,7 @@ export default function studionew() {
                   what's possible, constantly redefining the landscape of
                   digital innovation.
                 </div>
-                <div className="flex  gap-5 flex-col lg:flex-row">
+                <div className="flex  gap-5 flex-col md:flex-row">
                   {/* Josué */}
                   <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-black">
                     <div className="w-full h-[250px] bg-josue bg-cover md:block hidden rounded-lg mb-2"></div>
@@ -211,7 +211,7 @@ export default function studionew() {
             </div>
           </div>
         {/* Find us */}
-          <div className="pt-14 md:pt-28  flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between  mx-auto">
+          <div className="pt-14 md:pt-28  flex flex-col lg:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between  mx-auto">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] md:sticky top-12 font-Lato">
               FIND US
             </div>

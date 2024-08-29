@@ -2,8 +2,8 @@ import React from 'react';
 
 const CardProjectsSide = ({ items, selectedId, setSelectedId }) => {
   return (
-    <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
-      <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 md:mb-0 h-full md:sticky top-12 font-Lato">
+    <div className="mt-12 flex flex-col lg:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
+      <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 lg:mb-10 h-full md:sticky top-12 font-Lato">
         Side projects
       </div>
       <div className="flex-grow break-all">
@@ -31,7 +31,7 @@ const CardProjectsSide = ({ items, selectedId, setSelectedId }) => {
                 </div>
 
                 {selectedId === item.id && (
-                  <div className="text-white mt-4 p-4 border-l border-gray-600 rounded-lg shadow-md">
+                  <div className="text-white mt-4 p-4 border-l border-r border-gray-600 rounded-lg shadow-md">
                   <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
                     <div>
                       <dt className="font-semibold text-lg">Recommendation:</dt>
