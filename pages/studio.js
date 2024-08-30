@@ -13,6 +13,7 @@ import currentProjects from '@/src/currentProjects';
 import sideProjects from '@/src/sideProjects';
 import previousProjects from '@/src/previousProjects';
 import Timeline from '@/components/TimeLineSlider';
+import TimeLine from '@/components/TimeLine';
 import LinkTree from '@/components/LinkTree';
 import ImageSlider from '@/components/pictures';
 import TestCardProjects from '@/components/cardprojects_test';
@@ -130,12 +131,12 @@ export default function studionew() {
           <div className="mt-12 flex flex-col md:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[150px] mb-8 md:mb-0 h-full md:sticky top-12 font-Lato">
               Timeline
-            </div>
-            <div className="flex-grow">
+              <div className="flex-grow">
               <div className="flex flex-col max-w-[1500px] bg-black">
                 {/* An horizontal time line that we can scroll and expend the evenment we want*/} 
-                <Timeline/>
+                <TimeLine/>
               </div>
+            </div>
             </div>
           </div>
         {/* Main projects */}

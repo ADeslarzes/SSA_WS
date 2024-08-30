@@ -16,18 +16,22 @@
     "@nextui-org/system": "^2.2.5",
     "@react-three/drei": "^9.109.5",
     "@react-three/fiber": "^8.17.5",
+    "@schedule-x/react": "^1.58.3",
+    "@schedule-x/theme-default": "^1.59.2",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.425",
     "@syncfusion/ej2-react-layouts": "^26.1.38",
     "autoprefixer": "10.4.14",
     "bootstrap": "^5.3.3",
     "framer-motion": "^10.18.0",
+    "frappe-gantt": "^0.6.1",
     "keen-slider": "^6.8.6",
     "next": "^14.2.5",
     "pdf-lib": "^1.17.1",
     "postcss": "8.4.27",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-bootstrap": "^2.10.4",
+    "react-calendar-timeline": "^0.28.0",
     "react-chrono": "^2.6.1",
     "react-dom": "18.2.0",
     "react-icons": "^5.2.1",
@@ -36,6 +40,7 @@
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.4.5",
     "three": "^0.166.1",
-    "three-stdlib": "^2.32.2"
+    "three-stdlib": "^2.32.2",
+    "vis-timeline": "^7.7.3"
   }
 }
