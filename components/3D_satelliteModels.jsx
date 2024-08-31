@@ -9,8 +9,8 @@ function RotatingModel({ path, scale }) {
   useFrame(() => {
     if (modelRef.current) {
       modelRef.current.rotation.y += 0.01;
-      modelRef.current.rotation.x += 0.01;
-      modelRef.current.rotation.z += 0.01;
+      // modelRef.current.rotation.x += 0.01;
+      // modelRef.current.rotation.z += 0.01;
     }
   });
 
@@ -22,7 +22,7 @@ function SatelliteModels() {
   const [isScreenWide, setIsScreenWide] = useState(false);
 
   const models = [
-    { path: "/satellites/Gateway core.glb", scale: [0.1, 0.1, 0.1] }, 
+    { path: "/satellites/Gateway.glb", scale: [0.1, 0.1, 0.1] }, 
   ];
 
   useEffect(() => {
