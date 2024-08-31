@@ -8,7 +8,7 @@ import { getFresnelMat } from '../src/getFresnelMat';
 
 const Simulation = ({ onLoad }) => {
   const canvasRef = useRef();
-
+  
   useEffect(() => {
     if (!window) return;
 
@@ -49,26 +49,27 @@ const Simulation = ({ onLoad }) => {
       });
     };
 
-    // Load Earth textures with fallback
+    // Load Earth textures with a fallback to lower-quality images if any high-quality ones fail
     const loadEarthTextures = async () => {
-      const albedoResult = await loadTextureWithFallback('/earth/Albedo.jpg', '/earth/00_earthmap1k.jpg');
-      const specularResult = await loadTextureWithFallback('/earth/Ocean.png', '/earth/00_earthmap1k.jpg');
-      const bumpResult = await loadTextureWithFallback('/earth/Bump.jpg', '/earth/01_earthbump1k.jpg');
-      const lightsResult = await loadTextureWithFallback('/earth/night_lights_modified.png', '/earth/03_earthlights1k.jpg');
-      const cloudsResult = await loadTextureWithFallback('/earth/Clouds.png', '/earth/04_earthcloudmap.jpg');
-
+      let albedoResult = await loadTextureWithFallback('/earth/Albdo.jpg', '/earth/00_earthmap1k.jpg');
+      let specularResult = await loadTextureWithFallback('/earth/Ocean.png', '/earth/00_earthmap1k.jpg');
+      let bumpResult = await loadTextureWithFallback('/earth/Bump.jpg', '/earth/01_earthbump1k.jpg');
+      let lightsResult = await loadTextureWithFallback('/earth/night_lights_modified.png', '/earth/03_earthlights1k.jpg');
+      let cloudsResult = await loadTextureWithFallback('/earth/Clouds.png', '/earth/04_earthcloudmap.jpg');
+    
       const anyFailure = !albedoResult.success || !specularResult.success || !bumpResult.success || !lightsResult.success || !cloudsResult.success;
-
+    
       if (anyFailure) {
-        return {
-          albedo: albedoResult.texture,
-          specular: specularResult.texture,
-          bump: bumpResult.texture,
-          lights: lightsResult.texture,
-          clouds: cloudsResult.texture,
-        };
+        console.log('High-quality texture failed to load. Falling back to low-quality textures.');
+      
+        // Reattempt to load all textures with the low-quality URLs
+        albedoResult = await loadTextureWithFallback('/earth/00_earthmap1k.jpg', '/earth/00_earthmap1k.jpg');
+        specularResult = await loadTextureWithFallback('/earth/00_earthmap1k.jpg', '/earth/00_earthmap1k.jpg');
+        bumpResult = await loadTextureWithFallback('/earth/01_earthbump1k.jpg', '/earth/01_earthbump1k.jpg');
+        lightsResult = await loadTextureWithFallback('/earth/03_earthlights1k.jpg', '/earth/03_earthlights1k.jpg');
+        cloudsResult = await loadTextureWithFallback('/earth/04_earthcloudmap.jpg', '/earth/04_earthcloudmap.jpg');
       }
-
+    
       return {
         albedo: albedoResult.texture,
         specular: specularResult.texture,
