@@ -2,15 +2,20 @@ import React, { useState, useEffect, useRef } from 'react';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 
-function RotatingModel({ path, scale }) {
-  const { scene } = useGLTF(path);
+function RotatingModel({ path, scale, setLoading }) {
+  // Use useGLTF's built-in loading state
+  const { scene, isLoading } = useGLTF(path);
+
+  // Update the loading state based on useGLTF's loading status
+  useEffect(() => {
+    setLoading(isLoading);
+  }, [isLoading, setLoading]);
+
   const modelRef = useRef();
 
   useFrame(() => {
     if (modelRef.current) {
       modelRef.current.rotation.y += 0.01;
-      // modelRef.current.rotation.x += 0.01;
-      // modelRef.current.rotation.z += 0.01;
     }
   });
 
@@ -20,9 +25,10 @@ function RotatingModel({ path, scale }) {
 function SatelliteModels() {
   const [currentModelIndex, setCurrentModelIndex] = useState(0);
   const [isScreenWide, setIsScreenWide] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const models = [
-    { path: "/satellites/Gateway.glb", scale: [0.1, 0.1, 0.1] }, 
+    { path: "/satellites/Gateway.glb", scale: [0.1, 0.1, 0.1] },
   ];
 
   useEffect(() => {
@@ -34,7 +40,6 @@ function SatelliteModels() {
       setIsScreenWide(window.innerWidth > 600);
     };
 
-    // Check if window is available before setting up the event listener
     if (typeof window !== "undefined") {
       setIsScreenWide(window.innerWidth > 600);
       window.addEventListener('resize', handleResize);
@@ -42,8 +47,6 @@ function SatelliteModels() {
 
     return () => {
       clearInterval(interval);
-
-      // Clean up the event listener if window is available
       if (typeof window !== "undefined") {
         window.removeEventListener('resize', handleResize);
       }
@@ -52,7 +55,22 @@ function SatelliteModels() {
 
   return (
     <div style={{ position: 'relative', height: '100vh', width: '100vw' }}>
-      {/* Conditionally render the text overlay based on screen width */}
+      {loading && (
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          color: 'white',
+          zIndex: 2,
+
+        }}
+        className="animate-pulse"
+        >
+          Loading...
+        </div>
+      )}
+
       {isScreenWide && (
         <div style={{
           position: 'absolute',
@@ -74,20 +92,16 @@ function SatelliteModels() {
         </div>
       )}
 
-      {/* 3D Model Canvas */}
       <Canvas style={{ height: '100vh', width: '100vw' }}>
-        {/* Existing lights */}
         <ambientLight intensity={1} />
         <directionalLight position={[10, 10, 5]} intensity={0.8} />
-      
-        {/* Added lights */}
         <pointLight position={[0, 10, 0]} intensity={1} />
         <spotLight position={[5, 15, 10]} angle={0.3} penumbra={0.5} intensity={1} castShadow />
-      
-        {/* Model and Controls */}
-        <RotatingModel 
-          path={models[currentModelIndex].path} 
-          scale={models[currentModelIndex].scale} 
+
+        <RotatingModel
+          path={models[currentModelIndex].path}
+          scale={models[currentModelIndex].scale}
+          setLoading={setLoading}
         />
         <OrbitControls />
       </Canvas>

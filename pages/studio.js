@@ -37,16 +37,6 @@ export default function studionew() {
   const [initialLoad, setInitialLoad] = useState(false);
 
   useEffect(() => {
-    if (initialLoad) {
-      const timer = setTimeout(() => {
-        setIsLoaded(true);
-      }, 5000); // 5 seconds delay
-
-      return () => clearTimeout(timer); // Cleanup the timer on component unmount
-    }
-  }, [initialLoad]);
-
-  useEffect(() => {
     window.addEventListener('scroll', checkIsInView);
 
     return () => {
@@ -85,15 +75,11 @@ export default function studionew() {
       <div className="h-screen fixed -z-10 top-0 w-screen bg-black flex items-center flex-col justify-center md:max-h-max">
         {/* <div className="w-full z-20  p-9 md:p-16 absolute top-0 h-max flex justify-between items-center font-semibold"></div> */}
         {/* Image du studio */}
-        <div>
-          <SatelliteModels />
-        </div>
+         <SatelliteModels />
       </div>
-
       <div>
         <NavigationMenu />
       </div>
-
       <div className="bg-black md:bg-black rounded-t-2xl">
         <motion.div
           id="toBeScaled"

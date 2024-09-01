@@ -17,7 +17,7 @@ export default function Home() {
     if (initialLoad) {
       const timer = setTimeout(() => {
         setIsLoaded(true);
-      }, 2800); // 5 seconds delay
+      }, 2800); // 2.8 seconds delay
 
       return () => clearTimeout(timer); // Cleanup the timer on component unmount
     }
