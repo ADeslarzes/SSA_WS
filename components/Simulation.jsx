@@ -51,7 +51,7 @@ const Simulation = ({ onLoad }) => {
 
     // Load Earth textures with a fallback to lower-quality images if any high-quality ones fail
     const loadEarthTextures = async () => {
-      let albedoResult = await loadTextureWithFallback('/earth/Albdo.jpg', '/earth/00_earthmap1k.jpg');
+      let albedoResult = await loadTextureWithFallback('/earth/Albedo.jpg', '/earth/00_earthmap1k.jpg');
       let specularResult = await loadTextureWithFallback('/earth/Ocean.png', '/earth/00_earthmap1k.jpg');
       let bumpResult = await loadTextureWithFallback('/earth/Bump.jpg', '/earth/01_earthbump1k.jpg');
       let lightsResult = await loadTextureWithFallback('/earth/night_lights_modified.png', '/earth/03_earthlights1k.jpg');
