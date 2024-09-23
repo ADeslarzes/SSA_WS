@@ -38,7 +38,7 @@ export default function Home() {
       {!isLoaded && <EPFL_3D modelPath="/ssa_logo/EPFL.obj" />}
         
       {/* Logo */}
-      <div className="w-full h-max flex justify-between items-center font-semibold z-20">
+      <div className="w-full h-max flex justify-between items-center font-semibold">
         <SolidLogo />
       </div>
 

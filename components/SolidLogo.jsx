@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function SolidLogo() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so the state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const logoStyle = {
     position: 'absolute',
-    top: '6',
-    left: '0',
-    padding: '10px', // Optional: add some padding
-    maxWidth: '200px' // Adjust size as needed
+    top: '10px',
+    left: '10px',
+    padding: '10px',
+    maxWidth: '200px',
+    display: isMobile ? 'none' : 'block', // Hide logo on mobile
   };
 
   return (

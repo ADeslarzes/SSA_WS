@@ -6,9 +6,9 @@ const CardProjectsSide = ({ items, selectedId, setSelectedId }) => {
       <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 lg:mb-10 h-full md:sticky top-12 font-Lato">
         Side projects
       </div>
-      <div className="flex-grow break-all">
-        <div className="flex flex-col break-all">
-          <div className="text-white break-all mb-12 text-xl" style={{ width: '90%' }}>
+      <div className="flex-grow break-words">
+        <div className="flex flex-col break-words">
+          <div className="text-white break-words mb-12 text-xl" style={{ width: '90%' }}>
             We are currently working on a number of side projects that aim to render this world a better place. Here are some of the projects we are currently working on:
           </div>
           {/* Toggle bar */}
