@@ -20,6 +20,7 @@ const TimeLine = () => {
       const period = Number(endMonth) - Number(startMonth) + 12 * (Number(endYear) - Number(startYear));
       const startMonthIndex = Number(startMonth) - 1; // Months are 0-indexed
       const endMonthIndex = Number(endMonth) - 1;
+      const image = item.image
   
       const newDate = {
         id: Number(startYear),
@@ -30,7 +31,8 @@ const TimeLine = () => {
         period: period,
         startMonthIndex: startMonthIndex,
         endMonthIndex: endMonthIndex,
-        event: item.title // Assuming each item has an `event` field
+        event: item.title, // Assuming each item has an `event` field
+        image: image
       };
       dates.push(newDate);
     });
@@ -52,6 +54,12 @@ const TimeLine = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex === years.length - 1 ? 0 : prevIndex + 1
       );
+    };
+
+    const imageStyle = {
+      width: '150px',
+      height: '150px',
+      objectFit: 'cover'
     };
   
     const sliderStyle = {
@@ -82,7 +90,7 @@ const TimeLine = () => {
     };
   
     const yearStyle = {
-      background: 'white',
+      background: 'black',
       color: 'red',
       width: '200px',
       height: '50px',
@@ -181,8 +189,9 @@ const TimeLine = () => {
                           background: 'gray',
                           padding: '20px',
                           margin: '50px 0',
-                          width: activeEvent === eventIndex ? '300px' : (date.startYear === date.endYear ? `${date.period * 10 }%` : `${date.period * 5 + 60 }%`), //53
-                          height: activeEvent === eventIndex ? '150px' :  '1px',
+                          width: activeEvent === eventIndex ? '500px' : '2050px', //53
+                          //(date.startYear === date.endYear ? `${date.period * 10 }%` : `${date.period * 5 + 60 }%`)
+                          height: activeEvent === eventIndex ? '200px' :  '1px',
                           left: `${date.startMonth * 90}px`,
                           top : `${(eventIndex + 1) * 100}px`, //50
                           cursor: 'pointer',
@@ -195,6 +204,7 @@ const TimeLine = () => {
                         onClick={() => handleEventClick(eventIndex)}>
   
                       {date.event}
+                      { activeEvent == eventIndex && <img src={'/projects/satellite.avif'} alt={date.image} style={imageStyle} />}
                     </div>
                   ))}
               </div>

@@ -14,7 +14,7 @@ const timeline = [
       { url: 'https://www.epfl.ch/labs/lap/', text: 'VIDEO' },
     ],
   },
-  {
+  /*{
     id: 2,
     status: 'M',
     title: 'LOST',
@@ -56,7 +56,7 @@ const timeline = [
       { url: 'https://www.epfl.ch/labs/lap/', text: 'IMAGES' },
       { url: 'https://www.epfl.ch/labs/lap/', text: 'VIDEO' },
     ],
-  },
+  },*/
 ];
 
 export default timeline;

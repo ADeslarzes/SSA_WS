@@ -5,7 +5,6 @@ const ImageSlider = () => {
     "/projects/satellite.avif",
     "/projects/satellite.avif",
     "/projects/satellite.avif",
-    "/projects/satellite.avif",
     "/projects/satellite.avif"
   ];
 

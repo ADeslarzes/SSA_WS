@@ -15,9 +15,11 @@ import sideProjects from '@/src/sideProjects';
 import previousProjects from '@/src/previousProjects';
 import TimeLine from '@/components/TimeLine';
 import LinkTree from '@/components/LinkTree';
-import ImageSlider from '@/components/pictures';
+import ImageSlider from '@/components/our_pictures';
 import TestCardProjects from '@/components/cardprojects_test';
 import SatelliteModels from '@/components/3D_satelliteModels';
+import josué from "@/public/images/team_images/josué.png";
+import TeamSlider from '@/components/teamMembers';
 
 export default function studionew() {
   const scrollRef = useRef(null);
@@ -88,7 +90,7 @@ export default function studionew() {
           className="w-screen min-h-screen absolute overflow-hidden -mt-16 rounded-2xl bg-black border-t border-gray-400 shadow-inner items-center md:max-h-max"
         >
         {/*Pictures*/}
-          {/* <div className="mt-12 flex flex-col lg:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
+          <div className="mt-12 flex flex-col lg:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px] mx-auto">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[150px] mb-8 lg:mb-10 h-full md:sticky top-12 font-Lato">
               Pictures
             </div>
@@ -97,7 +99,7 @@ export default function studionew() {
                 <ImageSlider/>
               </div>
             </div>
-          </div> */}
+          </div> 
         {/* Description of the association */}
           <div className="mt-12 flex flex-col lg:flex-row w-full p-8 md:px-28 lg:max-w-[2000px] justify-between gap-x-[120px]">
             <div className="text-[#B22222] text-3xl md:text-5xl w-[300px] mb-8 lg:mb-10  h-full md:sticky top-12 font-Lato">
@@ -126,11 +128,27 @@ export default function studionew() {
             </div>
           </div>
         {/* Main projects */}
-          <CardProjects
+          {/*<CardProjects
             items={currentProjects}
             selectedId={sideSelectedId}
             setSelectedId={setSideSelectedId}
-          />
+          />*/}
+          <div className="pt-14 md:pt-28 flex flex-col lg:flex-row w-full p-8 md:px-28 lg:max-w-[2000px]  justify-between gap-x-[120px] mx-auto">
+            <div className="text-[#B22222] mb-8 lg:mb-10 text-3xl md:text-5xl w-[300px] h-full md:sticky top-12 font-Lato">
+              Projects
+            </div>
+            <div className="flex-grow">
+              <div className="flex flex-col  max-w-[1500px]">
+                <div className="flex  gap-5 flex-col md:flex-col">
+                <CardProjects
+                  items={currentProjects}
+                  selectedId={sideSelectedId}
+                  setSelectedId={setSideSelectedId}
+                />
+                </div>
+              </div>
+            </div>
+          </div>
         {/* Side projects */}
           <CardProjectsSide
             items={sideProjects}
@@ -156,42 +174,7 @@ export default function studionew() {
                   digital innovation.
                 </div>
                 <div className="flex  gap-5 flex-col md:flex-row">
-                  {/* Josué */}
-                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-black">
-                    <div className="w-full h-[250px] bg-josue bg-cover md:block hidden rounded-lg mb-2"></div>
-                    <div className="flex gap-x-2 mb-2">
-                      <div className="bg-[#B00000] text-md text-black px-2 py-0.5 rounded-md">
-                        Lead
-                      </div>
-                    </div>
-                    <p className="text-white font-semibold">
-                      Josué Aubert{' '}
-                    </p>
-                    <a className="text-white/40 text-[#B00000]" href="mailto:josue.aubert@epfl.ch">josue.aubert@epfl.ch</a>
-                    <p className="text-white/40">
-                      PH BA3
-                    </p>
-                    <p className='text-white/40'>
-                      Super beau gosse
-                    </p>
-                  </div>
-                  {/* Aymeric */}
-                  <div className="w-full md:max-w-[300px] min-h-[200px] p-8 flex flex-col text-black rounded-xl bg-black">
-                    <div className="w-full h-[250px] bg-aymeric bg-cover md:block hidden rounded-lg mb-2"></div>
-                    <div className="flex gap-x-2 mb-2">
-                      <div className="bg-[#B00000] text-md text-black px-2 py-0.5 rounded-md">
-                        Lead
-                      </div>
-                    </div>
-                    <p className="text-white font-semibold">
-                      Aymeric Deslarzes{' '}
-                    </p>
-                    <a className="text-white/40 text-[#B00000]" href="mailto:aymeric.deslarzes@epfl.ch">aymeric.deslarzes@epfl.ch</a>
-                    <p className="text-white/40">
-                      PH BA3
-                    </p>
-                  </div>
-                  {/* Autre */}
+                  <TeamSlider/>
                 </div>
               </div>
             </div>
